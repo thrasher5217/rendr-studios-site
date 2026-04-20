@@ -381,7 +381,7 @@ function BrandView({ openFaq, setOpenFaq }) {
               <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-1 sm:mb-2">
                 Creators
               </div>
-              <div className="font-serif-display text-4xl sm:text-5xl md:text-7xl">10</div>
+              <div className="font-serif-display text-4xl sm:text-5xl md:text-7xl">15+</div>
               <div className="mt-1 sm:mt-2 text-neutral-400 text-xs sm:text-sm">Matched to your app</div>
             </div>
             <div className="p-5 sm:p-6 md:p-10">
@@ -458,7 +458,7 @@ function BrandView({ openFaq, setOpenFaq }) {
             We run organic the way it <em className="neon-text">actually works</em>.
           </h2>
           <p className="mt-4 md:mt-6 text-neutral-400 text-base md:text-lg max-w-3xl">
-            10 creators. 3 platforms. 2,000+ videos a month. Here's how that's possible without the
+            15+ creators. 3 platforms. 2,000+ videos a month. Here's how that's possible without the
             quality falling off a cliff.
           </p>
         </div>
@@ -556,7 +556,7 @@ function BrandView({ openFaq, setOpenFaq }) {
               wk: "Week 01",
               title: "Onboarding & casting",
               body:
-                "We study your app, your current content, your competitors. Match 10 creators to your audience and brief them on your product, your voice, your goals.",
+                "We study your app, your current content, your competitors. Match 15+ creators to your audience and brief them on your product, your voice, your goals.",
             },
             {
               wk: "Week 02",
