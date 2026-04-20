@@ -218,32 +218,32 @@ export default function RendrStudios() {
           scrolled ? "backdrop-blur-xl bg-[#050507]/80 border-b border-neutral-900" : ""
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-4 md:py-5 flex items-center justify-between gap-2">
           {/* Wordmark */}
-          <a href="#" className="flex items-baseline gap-2">
-            <span className="rendr-mark text-2xl flicker">Rendr</span>
-            <span className="font-serif-display italic text-2xl text-neutral-500">
+          <a href="#" className="flex items-baseline gap-1.5 shrink-0">
+            <span className="rendr-mark text-xl md:text-2xl flicker">Rendr</span>
+            <span className="font-serif-display italic text-xl md:text-2xl text-neutral-500 hidden sm:inline">
               Studios
             </span>
           </a>
 
           {/* Mode Toggle */}
-          <div className="flex items-center gap-1 p-1 border border-neutral-800 rounded-full bg-neutral-950/60">
+          <div className="flex items-center gap-0.5 sm:gap-1 p-0.5 sm:p-1 border border-neutral-800 rounded-full bg-neutral-950/60">
             <button
               onClick={() => setMode("brand")}
-              className={`px-4 py-1.5 text-xs font-mono uppercase tracking-widest rounded-full transition-all ${
+              className={`px-2.5 sm:px-4 py-1 sm:py-1.5 text-[10px] sm:text-xs font-mono uppercase tracking-wider sm:tracking-widest rounded-full transition-all ${
                 isBrand ? "bg-neutral-100 text-neutral-950" : "text-neutral-500 hover:text-neutral-200"
               }`}
             >
-              For Brands
+              Brands
             </button>
             <button
               onClick={() => setMode("creator")}
-              className={`px-4 py-1.5 text-xs font-mono uppercase tracking-widest rounded-full transition-all ${
+              className={`px-2.5 sm:px-4 py-1 sm:py-1.5 text-[10px] sm:text-xs font-mono uppercase tracking-wider sm:tracking-widest rounded-full transition-all ${
                 !isBrand ? "bg-neutral-100 text-neutral-950" : "text-neutral-500 hover:text-neutral-200"
               }`}
             >
-              For Creators
+              Creators
             </button>
           </div>
 
@@ -270,22 +270,22 @@ export default function RendrStudios() {
       </div>
 
       {/* FOOTER */}
-      <footer className="border-t border-neutral-900 mt-32 relative z-10">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+      <footer className="border-t border-neutral-900 mt-16 md:mt-32 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-10 md:py-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8">
           <div>
             <div className="flex items-baseline gap-2 mb-3">
-              <span className="rendr-mark text-3xl">Rendr</span>
-              <span className="font-serif-display italic text-3xl text-neutral-500">
+              <span className="rendr-mark text-2xl md:text-3xl">Rendr</span>
+              <span className="font-serif-display italic text-2xl md:text-3xl text-neutral-500">
                 Studios
               </span>
             </div>
-            <p className="text-neutral-500 text-sm font-mono">
+            <p className="text-neutral-500 text-xs sm:text-sm font-mono">
               Organic short-form. Consumer apps. Built by operators.
             </p>
           </div>
-          <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-neutral-500">
-            <button onClick={() => setMode("brand")} className="hover:text-neutral-100">For Brands</button>
-            <button onClick={() => setMode("creator")} className="hover:text-neutral-100">For Creators</button>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-x-6 md:gap-x-8 gap-y-2 text-sm text-neutral-500">
+            <button onClick={() => setMode("brand")} className="hover:text-neutral-100 text-left">For Brands</button>
+            <button onClick={() => setMode("creator")} className="hover:text-neutral-100 text-left">For Creators</button>
             <a href="#work" className="hover:text-neutral-100">Work</a>
             <a href="mailto:[founder@rendrstudios.com]" className="hover:text-neutral-100">Contact</a>
             <a href="#" className="hover:text-neutral-100">LinkedIn</a>
@@ -336,30 +336,30 @@ function BrandView({ openFaq, setOpenFaq }) {
   return (
     <main className="pt-24">
       {/* HERO */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 pt-16 pb-24 relative">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 pt-12 md:pt-16 pb-16 md:pb-24 relative">
         <div className="fade-up">
-          <div className="flex items-center gap-3 mb-10 justify-center">
+          <div className="flex items-center gap-3 mb-8 md:mb-10 justify-center">
             <span className="w-2 h-2 rounded-full accent-bg animate-pulse" />
-            <span className="font-mono text-xs uppercase tracking-[0.25em] text-neutral-400">
+            <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-neutral-400">
               Now accepting 3 new clients — Q2 2026
             </span>
           </div>
 
-          <h1 className="font-serif-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight max-w-6xl mx-auto text-center">
+          <h1 className="font-serif-display text-3xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight max-w-6xl mx-auto text-center">
             Volume without quality is <em className="neon-text">noise</em>.
             <br />
             Quality without volume is <em className="neon-text">invisible</em>.
           </h1>
 
-          <div className="mt-14 max-w-4xl mx-auto text-center">
-            <p className="text-lg md:text-xl text-neutral-400 leading-relaxed">
+          <div className="mt-8 md:mt-14 max-w-4xl mx-auto text-center">
+            <p className="text-base md:text-xl text-neutral-400 leading-relaxed">
               We run organic short-form for consumer apps across TikTok, YouTube Shorts, and
               Instagram Reels — 1,000+ videos every month, every one edited to actually perform.
             </p>
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
+            <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
               <button
-                className="neon-btn px-7 py-4 rounded-full text-base font-medium flex items-center gap-3 whitespace-nowrap"
+                className="neon-btn px-6 sm:px-7 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-medium flex items-center gap-3 whitespace-nowrap w-full sm:w-auto justify-center"
                 data-cal-link="ty-mcguire-bfmkql/15min"
                 data-cal-namespace="15min"
                 data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
@@ -375,28 +375,28 @@ function BrandView({ openFaq, setOpenFaq }) {
         </div>
 
         {/* Hero stats band */}
-        <div className="mt-24 border border-neutral-900 rounded-3xl overflow-hidden grid-bg">
-          <div className="grid grid-cols-3 divide-x divide-neutral-900">
-            <div className="p-8 md:p-10">
-              <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-2">
+        <div className="mt-14 md:mt-24 border border-neutral-900 rounded-2xl md:rounded-3xl overflow-hidden grid-bg">
+          <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-neutral-900">
+            <div className="p-5 sm:p-6 md:p-10">
+              <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-1 sm:mb-2">
                 Creators
               </div>
-              <div className="font-serif-display text-6xl md:text-7xl">10</div>
-              <div className="mt-2 text-neutral-400 text-sm">Matched to your app</div>
+              <div className="font-serif-display text-4xl sm:text-5xl md:text-7xl">10</div>
+              <div className="mt-1 sm:mt-2 text-neutral-400 text-xs sm:text-sm">Matched to your app</div>
             </div>
-            <div className="p-8 md:p-10">
-              <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-2">
+            <div className="p-5 sm:p-6 md:p-10">
+              <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-1 sm:mb-2">
                 Platforms
               </div>
-              <div className="font-serif-display text-6xl md:text-7xl">3</div>
-              <div className="mt-2 text-neutral-400 text-sm">TikTok. Shorts. Reels.</div>
+              <div className="font-serif-display text-4xl sm:text-5xl md:text-7xl">3</div>
+              <div className="mt-1 sm:mt-2 text-neutral-400 text-xs sm:text-sm">TikTok. Shorts. Reels.</div>
             </div>
-            <div className="p-8 md:p-10">
-              <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-2">
+            <div className="p-5 sm:p-6 md:p-10">
+              <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-1 sm:mb-2">
                 Videos / Month
               </div>
-              <div className="font-serif-display text-6xl md:text-7xl neon-text">1,000+</div>
-              <div className="mt-2 text-neutral-400 text-sm">Edited. Posted. Tested.</div>
+              <div className="font-serif-display text-4xl sm:text-5xl md:text-7xl neon-text">1,000+</div>
+              <div className="mt-1 sm:mt-2 text-neutral-400 text-xs sm:text-sm">Edited. Posted. Tested.</div>
             </div>
           </div>
         </div>
@@ -409,9 +409,9 @@ function BrandView({ openFaq, setOpenFaq }) {
             <div key={i} className="flex items-center shrink-0">
               {["Volume is the method", "Creators film", "Editors cut", "Algorithms reward native", "One viral hit pays the month", "Built for consumer apps"].map(
                 (txt, j) => (
-                  <div key={j} className="flex items-center px-10">
-                    <span className="font-serif-display text-2xl italic text-neutral-500">{txt}</span>
-                    <span className="accent-color neon-soft ml-10">✦</span>
+                  <div key={j} className="flex items-center px-5 sm:px-10">
+                    <span className="font-serif-display text-lg sm:text-2xl italic text-neutral-500">{txt}</span>
+                    <span className="accent-color neon-soft ml-5 sm:ml-10">✦</span>
                   </div>
                 )
               )}
@@ -421,26 +421,26 @@ function BrandView({ openFaq, setOpenFaq }) {
       </section>
 
       {/* PROBLEM */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 py-32">
-        <div className="grid md:grid-cols-12 gap-10">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-16 md:py-32">
+        <div className="grid md:grid-cols-12 gap-6 md:gap-10">
           <div className="md:col-span-4">
-            <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-4">
+            <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-3 md:mb-4">
               01 / The gap
             </div>
-            <h2 className="font-serif-display text-4xl md:text-5xl leading-[1.05]">
+            <h2 className="font-serif-display text-3xl sm:text-4xl md:text-5xl leading-[1.05]">
               Posting 10 videos a month from your brand account isn't working.
               <br />
               <em className="neon-text">You already know that.</em>
             </h2>
           </div>
           <div className="md:col-span-7 md:col-start-6">
-            <p className="text-xl text-neutral-300 leading-relaxed">
+            <p className="text-lg md:text-xl text-neutral-300 leading-relaxed">
               The apps actually breaking out on TikTok and Reels aren't posting from their brand
               account. They're running 10+ creator accounts at real volume — because platform
               algorithms reward creator-native content, and short-form is a numbers game that needs
               real at-bats to win.
             </p>
-            <p className="mt-6 text-neutral-500 leading-relaxed">
+            <p className="mt-4 md:mt-6 text-neutral-500 leading-relaxed">
               The problem is most agencies can't deliver that volume. Not without the content
               falling apart.
             </p>
@@ -449,21 +449,21 @@ function BrandView({ openFaq, setOpenFaq }) {
       </section>
 
       {/* MECHANISM */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 py-32 border-t border-neutral-900">
-        <div className="mb-20">
-          <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-4">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-16 md:py-32 border-t border-neutral-900">
+        <div className="mb-10 md:mb-20">
+          <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-3 md:mb-4">
             02 / The mechanism
           </div>
-          <h2 className="font-serif-display text-4xl md:text-6xl leading-[1.02] max-w-4xl">
+          <h2 className="font-serif-display text-3xl sm:text-4xl md:text-6xl leading-[1.02] max-w-4xl">
             We run organic the way it <em className="neon-text">actually works</em>.
           </h2>
-          <p className="mt-6 text-neutral-400 text-lg max-w-3xl">
+          <p className="mt-4 md:mt-6 text-neutral-400 text-base md:text-lg max-w-3xl">
             10 creators. 3 platforms. 1,000+ videos a month. Here's how that's possible without the
             quality falling off a cliff.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-px bg-neutral-900 border border-neutral-900 rounded-3xl overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-neutral-900 border border-neutral-900 rounded-2xl md:rounded-3xl overflow-hidden">
           {[
             {
               num: "I.",
@@ -484,16 +484,16 @@ function BrandView({ openFaq, setOpenFaq }) {
                 "Every creator account posts daily across TikTok, YouTube Shorts, and Instagram Reels. That's the at-bat count the algorithm math actually requires to win.",
             },
           ].map((col, i) => (
-            <div key={i} className="bg-[#050507] p-10 hover-lift">
-              <div className="font-serif-display text-4xl italic mb-8 neon-text">{col.num}</div>
-              <h3 className="font-serif-display text-2xl mb-4 leading-tight">{col.title}</h3>
-              <p className="text-neutral-400 leading-relaxed">{col.body}</p>
+            <div key={i} className="bg-[#050507] p-6 sm:p-8 md:p-10 hover-lift">
+              <div className="font-serif-display text-3xl md:text-4xl italic mb-5 md:mb-8 neon-text">{col.num}</div>
+              <h3 className="font-serif-display text-xl md:text-2xl mb-3 md:mb-4 leading-tight">{col.title}</h3>
+              <p className="text-neutral-400 leading-relaxed text-sm md:text-base">{col.body}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 border-l-2 accent-border pl-6 max-w-3xl" style={{ boxShadow: "inset 4px 0 12px -8px rgba(var(--accent-glow), 0.5)" }}>
-          <p className="font-serif-display text-2xl italic text-neutral-300 leading-snug">
+        <div className="mt-8 md:mt-12 border-l-2 accent-border pl-4 sm:pl-6 max-w-3xl" style={{ boxShadow: "inset 4px 0 12px -8px rgba(var(--accent-glow), 0.5)" }}>
+          <p className="font-serif-display text-xl md:text-2xl italic text-neutral-300 leading-snug">
             Most agencies cap out at 30-50 videos a month because they make creators edit their own
             work. That's the bottleneck we removed.
           </p>
@@ -501,37 +501,37 @@ function BrandView({ openFaq, setOpenFaq }) {
       </section>
 
       {/* WORK */}
-      <section id="work" className="max-w-7xl mx-auto px-6 md:px-10 py-32 border-t border-neutral-900">
-        <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 mb-16">
+      <section id="work" className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-16 md:py-32 border-t border-neutral-900">
+        <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-4 md:gap-6 mb-8 md:mb-16">
           <div>
-            <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-4">
+            <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-3 md:mb-4">
               03 / The work
             </div>
-            <h2 className="font-serif-display text-5xl md:text-7xl leading-none">
+            <h2 className="font-serif-display text-3xl sm:text-5xl md:text-7xl leading-none">
               Real videos. <em className="neon-text">Real view counts.</em>
             </h2>
           </div>
-          <p className="font-mono text-sm text-neutral-500">Updated weekly</p>
+          <p className="font-mono text-xs sm:text-sm text-neutral-500">Updated weekly</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
           {sampleWork.map((item, i) => (
             <div
               key={i}
-              className="aspect-[9/16] thumbnail-placeholder rounded-2xl border border-neutral-900 hover-lift relative overflow-hidden group cursor-pointer"
+              className="aspect-[9/16] thumbnail-placeholder rounded-xl sm:rounded-2xl border border-neutral-900 hover-lift relative overflow-hidden group cursor-pointer"
             >
-              <div className="absolute inset-0 p-5 flex flex-col justify-between">
+              <div className="absolute inset-0 p-3 sm:p-5 flex flex-col justify-between">
                 <div className="flex items-start justify-between">
-                  <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500 border border-neutral-800 px-2 py-1 rounded">
+                  <div className="font-mono text-[8px] sm:text-[10px] uppercase tracking-widest text-neutral-500 border border-neutral-800 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">
                     {item.platform}
                   </div>
-                  <div className="w-10 h-10 rounded-full bg-neutral-100/10 backdrop-blur flex items-center justify-center group-hover:bg-white group-hover:text-neutral-950 transition">
-                    <span className="text-xs ml-0.5">▶</span>
+                  <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-full bg-neutral-100/10 backdrop-blur flex items-center justify-center group-hover:bg-white group-hover:text-neutral-950 transition">
+                    <span className="text-[10px] sm:text-xs ml-0.5">▶</span>
                   </div>
                 </div>
                 <div>
-                  <div className="font-serif-display text-3xl neon-text">{item.views}</div>
-                  <div className="text-xs text-neutral-400 mt-1">{item.label}</div>
+                  <div className="font-serif-display text-xl sm:text-3xl neon-text">{item.views}</div>
+                  <div className="text-[10px] sm:text-xs text-neutral-400 mt-1">{item.label}</div>
                 </div>
               </div>
             </div>
@@ -540,17 +540,17 @@ function BrandView({ openFaq, setOpenFaq }) {
       </section>
 
       {/* MONTH */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 py-32 border-t border-neutral-900">
-        <div className="mb-20">
-          <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-4">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-16 md:py-32 border-t border-neutral-900">
+        <div className="mb-10 md:mb-20">
+          <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-3 md:mb-4">
             04 / The month
           </div>
-          <h2 className="font-serif-display text-5xl md:text-7xl leading-none">
+          <h2 className="font-serif-display text-3xl sm:text-5xl md:text-7xl leading-none">
             What a month <em className="neon-text">looks like</em>.
           </h2>
         </div>
 
-        <div className="space-y-px bg-neutral-900 border border-neutral-900 rounded-3xl overflow-hidden">
+        <div className="space-y-px bg-neutral-900 border border-neutral-900 rounded-2xl md:rounded-3xl overflow-hidden">
           {[
             {
               wk: "Week 01",
@@ -577,30 +577,30 @@ function BrandView({ openFaq, setOpenFaq }) {
                 "1,000+ videos posted. Clear winners identified. A production engine that just keeps going. Month two starts the day month one ends.",
             },
           ].map((row, i) => (
-            <div key={i} className="bg-[#050507] p-8 md:p-10 grid md:grid-cols-[140px_1fr_2fr] gap-6 md:gap-10 items-start hover:bg-neutral-900/30 transition">
-              <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 pt-2">
+            <div key={i} className="bg-[#050507] p-5 sm:p-8 md:p-10 grid grid-cols-1 md:grid-cols-[140px_1fr_2fr] gap-2 sm:gap-4 md:gap-10 items-start hover:bg-neutral-900/30 transition">
+              <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 md:pt-2">
                 {row.wk}
               </div>
-              <div className="font-serif-display text-3xl leading-tight">{row.title}</div>
-              <div className="text-neutral-400 leading-relaxed">{row.body}</div>
+              <div className="font-serif-display text-2xl sm:text-3xl leading-tight">{row.title}</div>
+              <div className="text-neutral-400 leading-relaxed text-sm md:text-base">{row.body}</div>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 p-10 border border-neutral-900 rounded-3xl">
+        <div className="mt-8 md:mt-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8 p-5 sm:p-8 md:p-10 border border-neutral-900 rounded-2xl md:rounded-3xl">
           <div>
-            <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-3">
+            <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-2 md:mb-3">
               Engagements
             </div>
-            <div className="font-serif-display text-4xl md:text-5xl leading-tight">
+            <div className="font-serif-display text-2xl sm:text-4xl md:text-5xl leading-tight">
               Monthly retainer. <em className="neon-text">No long contracts.</em>
             </div>
-            <p className="mt-3 text-neutral-400 max-w-xl">
+            <p className="mt-3 text-neutral-400 max-w-xl text-sm md:text-base">
               We scope on the call based on your app, your goals, and the platforms we're running. We earn the renewal every 30 days.
             </p>
           </div>
           <button
-            className="neon-btn px-7 py-4 rounded-full text-base font-medium flex items-center gap-3 whitespace-nowrap"
+            className="neon-btn px-6 sm:px-7 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-medium flex items-center gap-3 whitespace-nowrap w-full sm:w-auto justify-center"
             data-cal-link="ty-mcguire-bfmkql/15min"
             data-cal-namespace="15min"
             data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
@@ -612,17 +612,17 @@ function BrandView({ openFaq, setOpenFaq }) {
       </section>
 
       {/* ABOUT */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 py-32 border-t border-neutral-900">
-        <div className="grid md:grid-cols-12 gap-10">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-16 md:py-32 border-t border-neutral-900">
+        <div className="grid md:grid-cols-12 gap-6 md:gap-10">
           <div className="md:col-span-5">
-            <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-4">
+            <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-3 md:mb-4">
               05 / Who runs this
             </div>
-            <h2 className="font-serif-display text-5xl md:text-6xl leading-[1.02]">
+            <h2 className="font-serif-display text-3xl sm:text-5xl md:text-6xl leading-[1.02]">
               Built by <em className="neon-text">operators</em>, not account managers.
             </h2>
           </div>
-          <div className="md:col-span-6 md:col-start-7 space-y-6 text-neutral-300 leading-relaxed text-lg">
+          <div className="md:col-span-6 md:col-start-7 space-y-4 md:space-y-6 text-neutral-300 leading-relaxed text-base md:text-lg">
             <p>
               Rendr was built because every app founder we talked to had the same problem — CPI
               stuck, organic flatlining, agency shipping 30 videos a month when they needed 300.
@@ -640,12 +640,12 @@ function BrandView({ openFaq, setOpenFaq }) {
       </section>
 
       {/* FAQ */}
-      <section className="max-w-5xl mx-auto px-6 md:px-10 py-32 border-t border-neutral-900">
-        <div className="mb-16">
-          <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-4">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 md:px-10 py-16 md:py-32 border-t border-neutral-900">
+        <div className="mb-8 md:mb-16">
+          <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-3 md:mb-4">
             06 / Before you book
           </div>
-          <h2 className="font-serif-display text-5xl md:text-6xl leading-none">
+          <h2 className="font-serif-display text-3xl sm:text-5xl md:text-6xl leading-none">
             Questions founders <em className="neon-text">ask first</em>.
           </h2>
         </div>
@@ -655,27 +655,27 @@ function BrandView({ openFaq, setOpenFaq }) {
             <button
               key={i}
               onClick={() => setOpenFaq(openFaq === i ? null : i)}
-              className="w-full py-7 text-left flex items-start justify-between gap-8 group"
+              className="w-full py-5 md:py-7 text-left flex items-start justify-between gap-4 sm:gap-8 group"
             >
-              <div className="flex-1">
-                <div className="flex items-start gap-6">
-                  <span className="font-mono text-xs text-neutral-600 pt-2">0{i + 1}</span>
-                  <div className="flex-1">
-                    <div className="font-serif-display text-2xl md:text-3xl leading-tight group-hover:accent-color transition-colors">
+              <div className="flex-1 min-w-0">
+                <div className="flex items-start gap-3 sm:gap-6">
+                  <span className="font-mono text-[10px] sm:text-xs text-neutral-600 pt-1 sm:pt-2 shrink-0">0{i + 1}</span>
+                  <div className="flex-1 min-w-0">
+                    <div className="font-serif-display text-lg sm:text-2xl md:text-3xl leading-tight group-hover:accent-color transition-colors">
                       {faq.q}
                     </div>
                     <div
                       className={`overflow-hidden transition-all duration-500 ${
-                        openFaq === i ? "max-h-40 mt-5" : "max-h-0"
+                        openFaq === i ? "max-h-60 mt-4 md:mt-5" : "max-h-0"
                       }`}
                     >
-                      <p className="text-neutral-400 leading-relaxed">{faq.a}</p>
+                      <p className="text-neutral-400 leading-relaxed text-sm md:text-base">{faq.a}</p>
                     </div>
                   </div>
                 </div>
               </div>
               <span
-                className={`font-serif-display text-3xl accent-color transition-transform duration-300 neon-soft ${
+                className={`font-serif-display text-2xl sm:text-3xl accent-color transition-transform duration-300 neon-soft shrink-0 ${
                   openFaq === i ? "rotate-45" : ""
                 }`}
               >
@@ -687,8 +687,8 @@ function BrandView({ openFaq, setOpenFaq }) {
       </section>
 
       {/* FINAL CTA */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 py-32">
-        <div className="border border-neutral-900 rounded-3xl p-10 md:p-20 text-center relative overflow-hidden grid-bg">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-16 md:py-32">
+        <div className="border border-neutral-900 rounded-2xl md:rounded-3xl p-6 sm:p-10 md:p-20 text-center relative overflow-hidden grid-bg">
           <div
             className="absolute inset-0 opacity-20"
             style={{
@@ -696,17 +696,17 @@ function BrandView({ openFaq, setOpenFaq }) {
             }}
           />
           <div className="relative">
-            <h2 className="font-serif-display text-5xl md:text-8xl leading-[0.95]">
+            <h2 className="font-serif-display text-3xl sm:text-5xl md:text-8xl leading-[0.95]">
               If your app's organic is stuck,
               <br />
               <em className="neon-text">let's talk</em>.
             </h2>
-            <p className="mt-8 text-neutral-400 text-lg max-w-xl mx-auto">
+            <p className="mt-5 md:mt-8 text-neutral-400 text-base md:text-lg max-w-xl mx-auto">
               15 minutes. No deck. We'll tell you straight if we can help — or if we can't.
             </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
+            <div className="mt-6 md:mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
               <button
-                className="neon-btn px-8 py-4 rounded-full text-base font-medium flex items-center gap-3"
+                className="neon-btn px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-medium flex items-center gap-3 w-full sm:w-auto justify-center"
                 data-cal-link="ty-mcguire-bfmkql/15min"
                 data-cal-namespace="15min"
                 data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
@@ -716,7 +716,7 @@ function BrandView({ openFaq, setOpenFaq }) {
               </button>
               <a
                 href="mailto:[founder@rendrstudios.com]"
-                className="font-mono text-sm text-neutral-500 hover:text-neutral-100 transition"
+                className="font-mono text-xs sm:text-sm text-neutral-500 hover:text-neutral-100 transition"
               >
                 or email [founder@rendrstudios.com]
               </a>
@@ -771,29 +771,29 @@ function CreatorView({ openFaq, setOpenFaq }) {
   return (
     <main className="pt-24">
       {/* HERO */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 pt-16 pb-24">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 pt-12 md:pt-16 pb-16 md:pb-24">
         <div className="fade-up">
-          <div className="flex items-center gap-3 mb-10 justify-center">
+          <div className="flex items-center gap-3 mb-8 md:mb-10 justify-center">
             <span className="w-2 h-2 rounded-full accent-bg animate-pulse" />
-            <span className="font-mono text-xs uppercase tracking-[0.25em] text-neutral-400">
+            <span className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] text-neutral-400">
               Applications reviewed every Friday
             </span>
           </div>
 
-          <h1 className="font-serif-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight max-w-6xl mx-auto text-center">
+          <h1 className="font-serif-display text-3xl sm:text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight max-w-6xl mx-auto text-center">
             Get paid to make content
             <br />
             for apps you'd <em className="neon-text">actually use</em>.
           </h1>
 
-          <div className="mt-14 max-w-4xl mx-auto text-center">
-            <p className="text-lg md:text-xl text-neutral-400 leading-relaxed">
+          <div className="mt-8 md:mt-14 max-w-4xl mx-auto text-center">
+            <p className="text-base md:text-xl text-neutral-400 leading-relaxed">
               We pair creators with fast-growing consumer apps. You film, we handle everything
               else. Consistent work, real pay, no chasing brand deals.
             </p>
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
-              <button className="neon-btn px-7 py-4 rounded-full text-base font-medium flex items-center gap-3 whitespace-nowrap">
+            <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
+              <button className="neon-btn px-6 sm:px-7 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-medium flex items-center gap-3 whitespace-nowrap w-full sm:w-auto justify-center">
                 Apply to create
                 <span>→</span>
               </button>
@@ -804,28 +804,28 @@ function CreatorView({ openFaq, setOpenFaq }) {
           </div>
         </div>
 
-        <div className="mt-24 border border-neutral-900 rounded-3xl overflow-hidden grid-bg">
-          <div className="grid grid-cols-3 divide-x divide-neutral-900">
-            <div className="p-8 md:p-10">
-              <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-2">
+        <div className="mt-14 md:mt-24 border border-neutral-900 rounded-2xl md:rounded-3xl overflow-hidden grid-bg">
+          <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-neutral-900">
+            <div className="p-5 sm:p-6 md:p-10">
+              <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-1 sm:mb-2">
                 Paid
               </div>
-              <div className="font-serif-display text-5xl md:text-6xl">Monthly</div>
-              <div className="mt-2 text-neutral-400 text-sm">Not when the brand feels like it.</div>
+              <div className="font-serif-display text-3xl sm:text-4xl md:text-6xl">Monthly</div>
+              <div className="mt-1 sm:mt-2 text-neutral-400 text-xs sm:text-sm">Not when the brand feels like it.</div>
             </div>
-            <div className="p-8 md:p-10">
-              <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-2">
+            <div className="p-5 sm:p-6 md:p-10">
+              <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-1 sm:mb-2">
                 You
               </div>
-              <div className="font-serif-display text-5xl md:text-6xl">Film</div>
-              <div className="mt-2 text-neutral-400 text-sm">That's it. We do the rest.</div>
+              <div className="font-serif-display text-3xl sm:text-4xl md:text-6xl">Film</div>
+              <div className="mt-1 sm:mt-2 text-neutral-400 text-xs sm:text-sm">That's it. We do the rest.</div>
             </div>
-            <div className="p-8 md:p-10">
-              <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-2">
+            <div className="p-5 sm:p-6 md:p-10">
+              <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-1 sm:mb-2">
                 Based
               </div>
-              <div className="font-serif-display text-5xl md:text-6xl neon-text">Anywhere</div>
-              <div className="mt-2 text-neutral-400 text-sm">We work with creators globally.</div>
+              <div className="font-serif-display text-3xl sm:text-4xl md:text-6xl neon-text">Anywhere</div>
+              <div className="mt-1 sm:mt-2 text-neutral-400 text-xs sm:text-sm">We work with creators globally.</div>
             </div>
           </div>
         </div>
@@ -837,9 +837,9 @@ function CreatorView({ openFaq, setOpenFaq }) {
             <div key={i} className="flex items-center shrink-0">
               {["No editing", "No scripts", "Consistent work", "Apps that don't suck", "Global creators", "Paid per video"].map(
                 (txt, j) => (
-                  <div key={j} className="flex items-center px-10">
-                    <span className="font-serif-display text-2xl italic text-neutral-500">{txt}</span>
-                    <span className="accent-color neon-soft ml-10">✦</span>
+                  <div key={j} className="flex items-center px-5 sm:px-10">
+                    <span className="font-serif-display text-lg sm:text-2xl italic text-neutral-500">{txt}</span>
+                    <span className="accent-color neon-soft ml-5 sm:ml-10">✦</span>
                   </div>
                 )
               )}
@@ -849,22 +849,22 @@ function CreatorView({ openFaq, setOpenFaq }) {
       </section>
 
       {/* PAIN */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 py-32">
-        <div className="grid md:grid-cols-12 gap-10">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-16 md:py-32">
+        <div className="grid md:grid-cols-12 gap-6 md:gap-10">
           <div className="md:col-span-4">
-            <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-4">
+            <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-3 md:mb-4">
               01 / The pitch
             </div>
-            <h2 className="font-serif-display text-4xl md:text-5xl leading-[1.05]">
+            <h2 className="font-serif-display text-3xl sm:text-4xl md:text-5xl leading-[1.05]">
               Stop chasing <em className="neon-text">one-off brand deals</em>.
             </h2>
           </div>
           <div className="md:col-span-7 md:col-start-6">
-            <p className="text-xl text-neutral-300 leading-relaxed">
+            <p className="text-lg md:text-xl text-neutral-300 leading-relaxed">
               Most UGC gigs are feast or famine. A $200 payment here, a flaky brand there, endless
               DMs that go nowhere. We do it differently.
             </p>
-            <p className="mt-6 text-neutral-400 leading-relaxed">
+            <p className="mt-4 md:mt-6 text-neutral-400 leading-relaxed text-sm md:text-base">
               Ongoing partnerships with real apps. Predictable work. You get paid for every video
               you film — not just the ones a brand "likes."
             </p>
@@ -873,17 +873,17 @@ function CreatorView({ openFaq, setOpenFaq }) {
       </section>
 
       {/* HOW */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 py-32 border-t border-neutral-900">
-        <div className="mb-20">
-          <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-4">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-16 md:py-32 border-t border-neutral-900">
+        <div className="mb-10 md:mb-20">
+          <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-3 md:mb-4">
             02 / The deal
           </div>
-          <h2 className="font-serif-display text-4xl md:text-6xl leading-[1.02] max-w-4xl">
+          <h2 className="font-serif-display text-3xl sm:text-4xl md:text-6xl leading-[1.02] max-w-4xl">
             You film. We handle <em className="neon-text">everything else</em>.
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-px bg-neutral-900 border border-neutral-900 rounded-3xl overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-neutral-900 border border-neutral-900 rounded-2xl md:rounded-3xl overflow-hidden">
           {[
             {
               num: "I.",
@@ -904,16 +904,16 @@ function CreatorView({ openFaq, setOpenFaq }) {
                 "Paid per video delivered, on a regular cadence. No 'brand approval' delays. No chasing invoices. Ship the videos, get paid, repeat.",
             },
           ].map((col, i) => (
-            <div key={i} className="bg-[#050507] p-10 hover-lift">
-              <div className="font-serif-display text-4xl italic mb-8 neon-text">{col.num}</div>
-              <h3 className="font-serif-display text-2xl mb-4 leading-tight">{col.title}</h3>
-              <p className="text-neutral-400 leading-relaxed">{col.body}</p>
+            <div key={i} className="bg-[#050507] p-6 sm:p-8 md:p-10 hover-lift">
+              <div className="font-serif-display text-3xl md:text-4xl italic mb-5 md:mb-8 neon-text">{col.num}</div>
+              <h3 className="font-serif-display text-xl md:text-2xl mb-3 md:mb-4 leading-tight">{col.title}</h3>
+              <p className="text-neutral-400 leading-relaxed text-sm md:text-base">{col.body}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-12 border-l-2 accent-border pl-6 max-w-3xl">
-          <p className="font-serif-display text-2xl italic text-neutral-300 leading-snug">
+        <div className="mt-8 md:mt-12 border-l-2 accent-border pl-4 sm:pl-6 max-w-3xl">
+          <p className="font-serif-display text-xl md:text-2xl italic text-neutral-300 leading-snug">
             Our editors turn your raw footage into finished videos that post across TikTok, YouTube
             Shorts, and Reels. You don't edit. You don't distribute. You film.
           </p>
@@ -921,20 +921,20 @@ function CreatorView({ openFaq, setOpenFaq }) {
       </section>
 
       {/* PAY */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 py-32 border-t border-neutral-900">
-        <div className="mb-16">
-          <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-4">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-16 md:py-32 border-t border-neutral-900">
+        <div className="mb-8 md:mb-16">
+          <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-3 md:mb-4">
             03 / The pay
           </div>
-          <h2 className="font-serif-display text-5xl md:text-7xl leading-none">
+          <h2 className="font-serif-display text-3xl sm:text-5xl md:text-7xl leading-none">
             What you can <em className="neon-text">actually make</em>.
           </h2>
-          <p className="mt-6 text-neutral-400 text-lg max-w-2xl">
+          <p className="mt-4 md:mt-6 text-neutral-400 text-base md:text-lg max-w-2xl">
             Pay depends on experience, niche, and volume. Here's the honest range.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
           {[
             {
               tier: "Starting",
@@ -963,54 +963,54 @@ function CreatorView({ openFaq, setOpenFaq }) {
           ].map((tier, i) => (
             <div
               key={i}
-              className={`p-8 rounded-3xl flex flex-col ${
+              className={`p-5 sm:p-8 rounded-2xl md:rounded-3xl flex flex-col ${
                 tier.highlight ? "neon-border bg-neutral-900/20" : "border border-neutral-900 hover-lift"
               }`}
             >
               {tier.highlight && (
-                <div className="font-mono text-xs uppercase tracking-widest accent-color mb-4 neon-soft">
+                <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest accent-color mb-3 sm:mb-4 neon-soft">
                   Most creators
                 </div>
               )}
-              <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-2">
+              <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-1 sm:mb-2">
                 {tier.tier}
               </div>
-              <div className="font-serif-display text-5xl mb-1">
+              <div className="font-serif-display text-3xl sm:text-5xl mb-1">
                 {tier.rate}
-                <span className="text-neutral-500 text-xl">/video</span>
+                <span className="text-neutral-500 text-base sm:text-xl">/video</span>
               </div>
-              <div className="text-neutral-400 text-sm mb-6">{tier.vol}</div>
-              <div className="font-serif-display text-2xl neon-text mb-6">~ {tier.monthly}/mo</div>
-              <p className="text-neutral-400 text-sm leading-relaxed mt-auto">{tier.desc}</p>
+              <div className="text-neutral-400 text-xs sm:text-sm mb-4 sm:mb-6">{tier.vol}</div>
+              <div className="font-serif-display text-xl sm:text-2xl neon-text mb-4 sm:mb-6">~ {tier.monthly}/mo</div>
+              <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed mt-auto">{tier.desc}</p>
             </div>
           ))}
         </div>
 
-        <p className="mt-10 font-mono text-sm text-neutral-500 max-w-2xl">
+        <p className="mt-6 sm:mt-10 font-mono text-xs sm:text-sm text-neutral-500 max-w-2xl">
           Paid monthly via direct deposit, PayPal, or Wise. No brand-approval gates. Ship the
           videos, get paid.
         </p>
       </section>
 
       {/* WHO */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 py-32 border-t border-neutral-900">
-        <div className="grid md:grid-cols-12 gap-10">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-16 md:py-32 border-t border-neutral-900">
+        <div className="grid md:grid-cols-12 gap-6 md:gap-10">
           <div className="md:col-span-5">
-            <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-4">
+            <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-3 md:mb-4">
               04 / Who we want
             </div>
-            <h2 className="font-serif-display text-5xl md:text-6xl leading-[1.02]">
+            <h2 className="font-serif-display text-3xl sm:text-5xl md:text-6xl leading-[1.02]">
               Not polished influencers.
               <br />
               <em className="neon-text">Real creators.</em>
             </h2>
-            <p className="mt-6 text-neutral-400 leading-relaxed">
+            <p className="mt-4 md:mt-6 text-neutral-400 leading-relaxed text-sm md:text-base">
               We're looking for people who make content that feels like content — not ads.
               Follower count isn't the filter. Watchability is.
             </p>
           </div>
           <div className="md:col-span-6 md:col-start-7">
-            <ul className="space-y-5">
+            <ul className="space-y-3 sm:space-y-5">
               {[
                 "Comfortable on camera — selfie-style, conversational, not reading a script",
                 "You post on TikTok, YouTube Shorts, or Reels — any or all",
@@ -1019,11 +1019,11 @@ function CreatorView({ openFaq, setOpenFaq }) {
                 "You can ship 5-10+ videos/week when you're actively on a campaign",
                 "Based anywhere — we work with creators globally",
               ].map((item, i) => (
-                <li key={i} className="flex items-start gap-5 pb-5 border-b border-neutral-900">
-                  <span className="font-serif-display text-xl italic shrink-0 neon-text">
+                <li key={i} className="flex items-start gap-3 sm:gap-5 pb-3 sm:pb-5 border-b border-neutral-900">
+                  <span className="font-serif-display text-lg sm:text-xl italic shrink-0 neon-text">
                     0{i + 1}
                   </span>
-                  <span className="text-neutral-300 leading-relaxed">{item}</span>
+                  <span className="text-neutral-300 leading-relaxed text-sm md:text-base">{item}</span>
                 </li>
               ))}
             </ul>
@@ -1032,37 +1032,37 @@ function CreatorView({ openFaq, setOpenFaq }) {
       </section>
 
       {/* ROSTER */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 py-32 border-t border-neutral-900">
-        <div className="mb-16">
-          <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-4">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-16 md:py-32 border-t border-neutral-900">
+        <div className="mb-8 md:mb-16">
+          <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-3 md:mb-4">
             05 / The roster
           </div>
-          <h2 className="font-serif-display text-5xl md:text-7xl leading-none">
+          <h2 className="font-serif-display text-3xl sm:text-5xl md:text-7xl leading-none">
             Creators <em className="neon-text">on the roster</em>.
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {creators.map((c, i) => (
             <div
               key={i}
-              className="p-7 border border-neutral-900 rounded-2xl hover-lift bg-[#050507]"
+              className="p-5 sm:p-7 border border-neutral-900 rounded-xl sm:rounded-2xl hover-lift bg-[#050507]"
             >
-              <div className="flex items-center gap-4 mb-5">
+              <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-5">
                 <div
-                  className="w-12 h-12 rounded-full accent-bg flex items-center justify-center font-serif-display text-xl text-neutral-950"
+                  className="w-10 h-10 sm:w-12 sm:h-12 rounded-full accent-bg flex items-center justify-center font-serif-display text-lg sm:text-xl text-neutral-950 shrink-0"
                   style={{ boxShadow: "0 0 16px rgba(var(--accent-glow), 0.5)" }}
                 >
                   {c.name.charAt(0)}
                 </div>
-                <div>
-                  <div className="font-serif-display text-xl">{c.name}</div>
-                  <div className="font-mono text-xs text-neutral-500 uppercase tracking-wider">
+                <div className="min-w-0">
+                  <div className="font-serif-display text-lg sm:text-xl">{c.name}</div>
+                  <div className="font-mono text-[10px] sm:text-xs text-neutral-500 uppercase tracking-wider">
                     {c.niche} · {c.followers}
                   </div>
                 </div>
               </div>
-              <p className="font-serif-display text-lg italic text-neutral-300 leading-snug">
+              <p className="font-serif-display text-base sm:text-lg italic text-neutral-300 leading-snug">
                 "{c.quote}"
               </p>
             </div>
@@ -1071,12 +1071,12 @@ function CreatorView({ openFaq, setOpenFaq }) {
       </section>
 
       {/* FAQ */}
-      <section className="max-w-5xl mx-auto px-6 md:px-10 py-32 border-t border-neutral-900">
-        <div className="mb-16">
-          <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-4">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 md:px-10 py-16 md:py-32 border-t border-neutral-900">
+        <div className="mb-8 md:mb-16">
+          <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-3 md:mb-4">
             06 / Before you apply
           </div>
-          <h2 className="font-serif-display text-5xl md:text-6xl leading-none">
+          <h2 className="font-serif-display text-3xl sm:text-5xl md:text-6xl leading-none">
             Questions creators <em className="neon-text">ask</em>.
           </h2>
         </div>
@@ -1086,27 +1086,27 @@ function CreatorView({ openFaq, setOpenFaq }) {
             <button
               key={i}
               onClick={() => setOpenFaq(openFaq === i ? null : i)}
-              className="w-full py-7 text-left flex items-start justify-between gap-8 group"
+              className="w-full py-5 md:py-7 text-left flex items-start justify-between gap-4 sm:gap-8 group"
             >
-              <div className="flex-1">
-                <div className="flex items-start gap-6">
-                  <span className="font-mono text-xs text-neutral-600 pt-2">0{i + 1}</span>
-                  <div className="flex-1">
-                    <div className="font-serif-display text-2xl md:text-3xl leading-tight group-hover:accent-color transition-colors">
+              <div className="flex-1 min-w-0">
+                <div className="flex items-start gap-3 sm:gap-6">
+                  <span className="font-mono text-[10px] sm:text-xs text-neutral-600 pt-1 sm:pt-2 shrink-0">0{i + 1}</span>
+                  <div className="flex-1 min-w-0">
+                    <div className="font-serif-display text-lg sm:text-2xl md:text-3xl leading-tight group-hover:accent-color transition-colors">
                       {faq.q}
                     </div>
                     <div
                       className={`overflow-hidden transition-all duration-500 ${
-                        openFaq === i ? "max-h-48 mt-5" : "max-h-0"
+                        openFaq === i ? "max-h-60 mt-4 md:mt-5" : "max-h-0"
                       }`}
                     >
-                      <p className="text-neutral-400 leading-relaxed">{faq.a}</p>
+                      <p className="text-neutral-400 leading-relaxed text-sm md:text-base">{faq.a}</p>
                     </div>
                   </div>
                 </div>
               </div>
               <span
-                className={`font-serif-display text-3xl accent-color transition-transform duration-300 neon-soft ${
+                className={`font-serif-display text-2xl sm:text-3xl accent-color transition-transform duration-300 neon-soft shrink-0 ${
                   openFaq === i ? "rotate-45" : ""
                 }`}
               >
@@ -1118,8 +1118,8 @@ function CreatorView({ openFaq, setOpenFaq }) {
       </section>
 
       {/* CTA */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 py-32">
-        <div className="border border-neutral-900 rounded-3xl p-10 md:p-20 text-center relative overflow-hidden grid-bg">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-16 md:py-32">
+        <div className="border border-neutral-900 rounded-2xl md:rounded-3xl p-6 sm:p-10 md:p-20 text-center relative overflow-hidden grid-bg">
           <div
             className="absolute inset-0 opacity-20"
             style={{
@@ -1127,21 +1127,21 @@ function CreatorView({ openFaq, setOpenFaq }) {
             }}
           />
           <div className="relative">
-            <h2 className="font-serif-display text-5xl md:text-8xl leading-[0.95]">
+            <h2 className="font-serif-display text-3xl sm:text-5xl md:text-8xl leading-[0.95]">
               Ready to <em className="neon-text">create</em>?
             </h2>
-            <p className="mt-8 text-neutral-400 text-lg max-w-xl mx-auto">
+            <p className="mt-5 md:mt-8 text-neutral-400 text-base md:text-lg max-w-xl mx-auto">
               Fill out the 2-minute application. We review every Friday. If there's a fit, we'll
               reach out within a week with next steps.
             </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
-              <button className="neon-btn px-8 py-4 rounded-full text-base font-medium flex items-center gap-3">
+            <div className="mt-6 md:mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
+              <button className="neon-btn px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-medium flex items-center gap-3 w-full sm:w-auto justify-center">
                 Start application
                 <span>→</span>
               </button>
               <a
                 href="#"
-                className="font-mono text-sm text-neutral-500 hover:text-neutral-100 transition"
+                className="font-mono text-xs sm:text-sm text-neutral-500 hover:text-neutral-100 transition"
               >
                 Questions? DM us on [Instagram]
               </a>
