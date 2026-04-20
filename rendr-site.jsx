@@ -364,7 +364,7 @@ function BrandView({ openFaq, setOpenFaq }) {
                 data-cal-namespace="15min"
                 data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
               >
-                Book a 15-min call
+                Book a Discovery Call
                 <span>→</span>
               </button>
               <span className="font-mono text-xs text-neutral-500">
@@ -605,7 +605,7 @@ function BrandView({ openFaq, setOpenFaq }) {
             data-cal-namespace="15min"
             data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
           >
-            Book a 15-min call
+            Book a Discovery Call
             <span>→</span>
           </button>
         </div>
@@ -711,7 +711,7 @@ function BrandView({ openFaq, setOpenFaq }) {
                 data-cal-namespace="15min"
                 data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
               >
-                Book a 15-min call
+                Book a Discovery Call
                 <span>→</span>
               </button>
               <a

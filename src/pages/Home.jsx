@@ -364,7 +364,7 @@ function BrandView({ openFaq, setOpenFaq }) {
                 data-cal-namespace="15min"
                 data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
               >
-                Book a 15-min call
+                Book a Discovery Call
                 <span>→</span>
               </button>
               <span className="font-mono text-xs text-neutral-500">
@@ -605,7 +605,7 @@ function BrandView({ openFaq, setOpenFaq }) {
             data-cal-namespace="15min"
             data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
           >
-            Book a 15-min call
+            Book a Discovery Call
             <span>→</span>
           </button>
         </div>
@@ -702,7 +702,7 @@ function BrandView({ openFaq, setOpenFaq }) {
               <em className="neon-text">let's talk</em>.
             </h2>
             <p className="mt-5 md:mt-8 text-neutral-400 text-base md:text-lg max-w-xl mx-auto">
-              15 minutes. No deck. We'll tell you straight if we can help — or if we can't.
+              No deck. No pitch. We'll tell you straight if we can help — or if we can't.
             </p>
             <div className="mt-6 md:mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
               <button
@@ -711,7 +711,7 @@ function BrandView({ openFaq, setOpenFaq }) {
                 data-cal-namespace="15min"
                 data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
               >
-                Book a 15-min call
+                Book a Discovery Call
                 <span>→</span>
               </button>
               <a
