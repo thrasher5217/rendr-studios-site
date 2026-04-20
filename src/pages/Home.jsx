@@ -316,7 +316,7 @@ function BrandView({ openFaq, setOpenFaq }) {
 
   const faqs = [
     {
-      q: "How is 1,000+ videos a month even possible without quality dropping?",
+      q: "How is 2,000+ videos a month even possible without quality dropping?",
       a: "Because our creators don't edit their own work. They film; our dedicated edit team cuts. Creators do what they're best at, editors do what they're best at. That's the whole unlock.",
     },
     {
@@ -354,7 +354,7 @@ function BrandView({ openFaq, setOpenFaq }) {
           <div className="mt-8 md:mt-14 max-w-4xl mx-auto text-center">
             <p className="text-base md:text-xl text-neutral-400 leading-relaxed">
               We run organic short-form for consumer apps across TikTok, YouTube Shorts, and
-              Instagram Reels — 1,000+ videos every month, every one edited to actually perform.
+              Instagram Reels — 2,000+ videos every month, every one edited to actually perform.
             </p>
 
             <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
@@ -395,7 +395,7 @@ function BrandView({ openFaq, setOpenFaq }) {
               <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-1 sm:mb-2">
                 Videos / Month
               </div>
-              <div className="font-serif-display text-4xl sm:text-5xl md:text-7xl neon-text">1,000+</div>
+              <div className="font-serif-display text-4xl sm:text-5xl md:text-7xl neon-text">2,000+</div>
               <div className="mt-1 sm:mt-2 text-neutral-400 text-xs sm:text-sm">Edited. Posted. Tested.</div>
             </div>
           </div>
@@ -458,7 +458,7 @@ function BrandView({ openFaq, setOpenFaq }) {
             We run organic the way it <em className="neon-text">actually works</em>.
           </h2>
           <p className="mt-4 md:mt-6 text-neutral-400 text-base md:text-lg max-w-3xl">
-            10 creators. 3 platforms. 1,000+ videos a month. Here's how that's possible without the
+            10 creators. 3 platforms. 2,000+ videos a month. Here's how that's possible without the
             quality falling off a cliff.
           </p>
         </div>
@@ -479,7 +479,7 @@ function BrandView({ openFaq, setOpenFaq }) {
             },
             {
               num: "III.",
-              title: "1,000+ posts across 3 platforms",
+              title: "2,000+ posts across 3 platforms",
               body:
                 "Every creator account posts daily across TikTok, YouTube Shorts, and Instagram Reels. That's the at-bat count the algorithm math actually requires to win.",
             },
@@ -562,7 +562,7 @@ function BrandView({ openFaq, setOpenFaq }) {
               wk: "Week 02",
               title: "Production live",
               body:
-                "Creators start filming. Our edit team starts cutting. First 250 videos hit your TikTok, Shorts, and Reels accounts. Content starts going out daily across all 3 platforms.",
+                "Creators start filming. Our edit team starts cutting. First 500 videos hit your TikTok, Shorts, and Reels accounts. Content starts going out daily across all 3 platforms.",
             },
             {
               wk: "Week 03",
@@ -574,7 +574,7 @@ function BrandView({ openFaq, setOpenFaq }) {
               wk: "Week 04",
               title: "Scale",
               body:
-                "1,000+ videos posted. Clear winners identified. A production engine that just keeps going. Month two starts the day month one ends.",
+                "2,000+ videos posted. Clear winners identified. A production engine that just keeps going. Month two starts the day month one ends.",
             },
           ].map((row, i) => (
             <div key={i} className="bg-[#050507] p-5 sm:p-8 md:p-10 grid grid-cols-1 md:grid-cols-[140px_1fr_2fr] gap-2 sm:gap-4 md:gap-10 items-start hover:bg-neutral-900/30 transition">
@@ -629,7 +629,7 @@ function BrandView({ openFaq, setOpenFaq }) {
             </p>
             <p>
               We're a lean team of two founders and a global edit crew that works around the clock,
-              because that's the only way the math on 1,000+ videos a month actually works.
+              because that's the only way the math on 2,000+ videos a month actually works.
             </p>
             <p className="text-neutral-500">
               You'll talk to founders on every call. You'll get answers the same day. You'll know
