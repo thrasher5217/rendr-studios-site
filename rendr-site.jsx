@@ -303,7 +303,7 @@ export default function RendrStudios() {
    ============================================================ */
 function BrandView({ openFaq, setOpenFaq }) {
   const sampleWork = [
-    { label: "Fitness app", views: "2.4M", platform: "TikTok" },
+    { label: "Tech / VR", views: "2M", platform: "Shorts", video: "https://www.youtube.com/embed/81LVnOdc600" },
     { label: "AI productivity", views: "890K", platform: "Reels" },
     { label: "Finance app", views: "1.1M", platform: "Shorts" },
     { label: "Language learning", views: "3.2M", platform: "TikTok" },
@@ -520,16 +520,28 @@ function BrandView({ openFaq, setOpenFaq }) {
               key={i}
               className="aspect-[9/16] thumbnail-placeholder rounded-2xl border border-neutral-900 hover-lift relative overflow-hidden group cursor-pointer"
             >
-              <div className="absolute inset-0 p-5 flex flex-col justify-between">
+              {item.video && (
+                <iframe
+                  src={item.video}
+                  className="absolute inset-0 w-full h-full"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{ pointerEvents: "auto" }}
+                />
+              )}
+              <div className={`absolute inset-0 p-5 flex flex-col justify-between ${item.video ? "pointer-events-none" : ""}`}>
                 <div className="flex items-start justify-between">
-                  <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500 border border-neutral-800 px-2 py-1 rounded">
+                  <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500 border border-neutral-800 px-2 py-1 rounded bg-neutral-950/70 backdrop-blur">
                     {item.platform}
                   </div>
-                  <div className="w-10 h-10 rounded-full bg-neutral-100/10 backdrop-blur flex items-center justify-center group-hover:bg-white group-hover:text-neutral-950 transition">
-                    <span className="text-xs ml-0.5">▶</span>
-                  </div>
+                  {!item.video && (
+                    <div className="w-10 h-10 rounded-full bg-neutral-100/10 backdrop-blur flex items-center justify-center group-hover:bg-white group-hover:text-neutral-950 transition">
+                      <span className="text-xs ml-0.5">▶</span>
+                    </div>
+                  )}
                 </div>
-                <div>
+                <div className="bg-gradient-to-t from-neutral-950/80 to-transparent -mx-5 -mb-5 px-5 pb-5 pt-8">
                   <div className="font-serif-display text-3xl neon-text">{item.views}</div>
                   <div className="text-xs text-neutral-400 mt-1">{item.label}</div>
                 </div>
@@ -702,7 +714,7 @@ function BrandView({ openFaq, setOpenFaq }) {
               <em className="neon-text">let's talk</em>.
             </h2>
             <p className="mt-8 text-neutral-400 text-lg max-w-xl mx-auto">
-              15 minutes. No deck. We'll tell you straight if we can help — or if we can't.
+              No deck. No pitch. We'll tell you straight if we can help — or if we can't.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
               <button
