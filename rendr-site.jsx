@@ -558,84 +558,13 @@ function BrandView({ openFaq, setOpenFaq }) {
         </div>
       </section>
 
-      {/* MONTH */}
-      <section className="max-w-7xl mx-auto px-6 md:px-10 py-32 border-t border-neutral-900">
-        <div className="mb-20">
-          <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-4">
-            04 / The month
-          </div>
-          <h2 className="font-serif-display text-5xl md:text-7xl leading-none">
-            What a month <em className="neon-text">looks like</em>.
-          </h2>
-        </div>
-
-        <div className="space-y-px bg-neutral-900 border border-neutral-900 rounded-3xl overflow-hidden">
-          {[
-            {
-              wk: "Week 01",
-              title: "Onboarding & casting",
-              body:
-                "We study your app, your current content, your competitors. Match 15+ creators to your audience and brief them on your product, your voice, your goals.",
-            },
-            {
-              wk: "Week 02",
-              title: "Production live",
-              body:
-                "Creators start filming. Our edit team starts cutting. First 500 videos hit your TikTok, Shorts, and Reels accounts. Content starts going out daily across all 3 platforms.",
-            },
-            {
-              wk: "Week 03",
-              title: "Signal",
-              body:
-                "Early data is in. 3-5 hooks pulling ahead. Specific creators outperforming. We adjust briefs and double down on what's working.",
-            },
-            {
-              wk: "Week 04",
-              title: "Scale",
-              body:
-                "2,000+ videos posted. Clear winners identified. A production engine that just keeps going. Month two starts the day month one ends.",
-            },
-          ].map((row, i) => (
-            <div key={i} className="bg-[#050507] p-8 md:p-10 grid md:grid-cols-[140px_1fr_2fr] gap-6 md:gap-10 items-start hover:bg-neutral-900/30 transition">
-              <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 pt-2">
-                {row.wk}
-              </div>
-              <div className="font-serif-display text-3xl leading-tight">{row.title}</div>
-              <div className="text-neutral-400 leading-relaxed">{row.body}</div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 p-10 border border-neutral-900 rounded-3xl">
-          <div>
-            <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-3">
-              Engagements
-            </div>
-            <div className="font-serif-display text-4xl md:text-5xl leading-tight">
-              Monthly retainer. <em className="neon-text">No long contracts.</em>
-            </div>
-            <p className="mt-3 text-neutral-400 max-w-xl">
-              We scope on the call based on your app, your goals, and the platforms we're running. We earn the renewal every 30 days.
-            </p>
-          </div>
-          <button
-            className="neon-btn px-7 py-4 rounded-full text-base font-medium flex items-center gap-3 whitespace-nowrap"
-            data-cal-link="ty-mcguire-bfmkql/15min"
-            data-cal-namespace="15min"
-            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
-          >
-            Book a Discovery Call
-            <span>→</span>
-          </button>
-        </div>
-      </section>
 
       {/* ABOUT */}
       <section className="max-w-7xl mx-auto px-6 md:px-10 py-32 border-t border-neutral-900">
         <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-5">
             <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-4">
-              05 / Who runs this
+              04 / Who runs this
             </div>
             <h2 className="font-serif-display text-5xl md:text-6xl leading-[1.02]">
               Built by <em className="neon-text">operators</em>, not account managers.
@@ -662,7 +591,7 @@ function BrandView({ openFaq, setOpenFaq }) {
       <section className="max-w-5xl mx-auto px-6 md:px-10 py-32 border-t border-neutral-900">
         <div className="mb-16">
           <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-4">
-            06 / Before you book
+            05 / Before you book
           </div>
           <h2 className="font-serif-display text-5xl md:text-6xl leading-none">
             Questions founders <em className="neon-text">ask first</em>.
@@ -968,7 +897,7 @@ function CreatorView({ openFaq, setOpenFaq }) {
               highlight: true,
             },
             {
-              tier: "Top-tier",
+              tier: "Dedicated",
               monthly: "$5,000 – $50,000",
               desc: "High-performing creators earning renewals and performance bonuses.",
               highlight: false,
