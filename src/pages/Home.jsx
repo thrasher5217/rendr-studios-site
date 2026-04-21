@@ -775,7 +775,7 @@ function CreatorView({ openFaq, setOpenFaq }) {
     },
     {
       q: "How many videos a week should I expect to film?",
-      a: "Varies by campaign. Minimum is typically 5 videos/week when you're active. Top creators ship 40-60/week. We tell you the target before you commit — no surprises.",
+      a: "You can dedicate up to an hour a day to film a handful of short clips. We send you the hooks and concepts — you just hit record. Top creators ship 40-60 videos/week. We tell you the target before you commit — no surprises.",
     },
     {
       q: "How do I get paid?",
