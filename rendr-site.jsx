@@ -720,7 +720,7 @@ function CreatorView({ openFaq, setOpenFaq }) {
           <div className="flex items-center gap-3 mb-10 justify-center">
             <span className="w-2 h-2 rounded-full accent-bg animate-pulse" />
             <span className="font-mono text-xs uppercase tracking-[0.25em] text-neutral-400">
-              Applications reviewed every Friday
+              Applications reviewed daily
             </span>
           </div>
 
@@ -742,7 +742,7 @@ function CreatorView({ openFaq, setOpenFaq }) {
                 <span>→</span>
               </PopupButton>
               <span className="font-mono text-xs text-neutral-500">
-                2-min application. Reviewed every Friday.
+                2-min application. Reviewed daily.
               </span>
             </div>
           </div>
@@ -994,7 +994,7 @@ function CreatorView({ openFaq, setOpenFaq }) {
                 <div>
                   <div className="font-serif-display text-xl">{c.name}</div>
                   <div className="font-mono text-xs text-neutral-500 uppercase tracking-wider">
-                    {c.niche} · {c.followers}
+                    {c.niche}
                   </div>
                 </div>
               </div>
@@ -1067,7 +1067,7 @@ function CreatorView({ openFaq, setOpenFaq }) {
               Ready to <em className="neon-text">create</em>?
             </h2>
             <p className="mt-8 text-neutral-400 text-lg max-w-xl mx-auto">
-              Fill out the 2-minute application. We review every Friday. If there's a fit, we'll
+              Fill out the 2-minute application. We review daily. If there's a fit, we'll
               reach out within a week with next steps.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
