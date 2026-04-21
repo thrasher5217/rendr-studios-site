@@ -315,7 +315,7 @@ function BrandView({ openFaq, setOpenFaq }) {
 
   const faqs = [
     {
-      q: "How is 2,000+ videos a month even possible without quality dropping?",
+      q: "How is up to 5,000 videos a month even possible without quality dropping?",
       a: "Because our creators don't edit their own work. They film; our dedicated edit team cuts. Creators do what they're best at, editors do what they're best at. That's the whole unlock.",
     },
     {
@@ -353,7 +353,7 @@ function BrandView({ openFaq, setOpenFaq }) {
           <div className="mt-14 max-w-4xl mx-auto text-center">
             <p className="text-lg md:text-xl text-neutral-400 leading-relaxed">
               We run organic short-form for consumer apps across TikTok, YouTube Shorts, and
-              Instagram Reels — 2,000+ videos every month, every one edited to actually perform.
+              Instagram Reels — up to 5,000 videos every month, every one edited to actually perform.
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
@@ -394,8 +394,8 @@ function BrandView({ openFaq, setOpenFaq }) {
               <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-2">
                 Videos / Month
               </div>
-              <div className="font-serif-display text-6xl md:text-7xl neon-text">2,000+</div>
-              <div className="mt-2 text-neutral-400 text-sm">Edited. Posted. Tested.</div>
+              <div className="font-serif-display text-6xl md:text-7xl neon-text">200-5,000</div>
+              <div className="mt-2 text-neutral-400 text-sm">Scaled to fit your needs.</div>
             </div>
           </div>
         </div>
@@ -457,7 +457,7 @@ function BrandView({ openFaq, setOpenFaq }) {
             We run organic the way it <em className="neon-text">actually works</em>.
           </h2>
           <p className="mt-6 text-neutral-400 text-lg max-w-3xl">
-            15+ creators. 3 platforms. 2,000+ videos a month. Here's how that's possible without the
+            15+ creators. 3 platforms. Up to 5,000 videos a month. Here's how that's possible without the
             quality falling off a cliff.
           </p>
         </div>
@@ -478,7 +478,7 @@ function BrandView({ openFaq, setOpenFaq }) {
             },
             {
               num: "III.",
-              title: "2,000+ posts across 3 platforms",
+              title: "Up to 5,000 posts across 3 platforms",
               body:
                 "Every creator account posts daily across TikTok, YouTube Shorts, and Instagram Reels. That's the at-bat count the algorithm math actually requires to win.",
             },
@@ -564,7 +564,7 @@ function BrandView({ openFaq, setOpenFaq }) {
             </p>
             <p>
               We're a lean team of two founders and a global edit crew that works around the clock,
-              because that's the only way the math on 2,000+ videos a month actually works.
+              because that's the only way the math on 5,000+ videos a month actually works.
             </p>
             <p className="text-neutral-500">
               You'll talk to founders on every call. You'll get answers the same day. You'll know
