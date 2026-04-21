@@ -957,24 +957,18 @@ function CreatorView({ openFaq, setOpenFaq }) {
           {[
             {
               tier: "Starting",
-              rate: "$15",
-              vol: "10-20 videos/mo",
               monthly: "$750 – $1,500",
               desc: "New to UGC, or smaller following. Prove the craft, tier up fast.",
               highlight: false,
             },
             {
               tier: "Experienced",
-              rate: "$25",
-              vol: "20-40 videos/mo",
               monthly: "$1,500 – $5,000",
               desc: "Proven consistency. Strong filming. Reliable delivery.",
               highlight: true,
             },
             {
               tier: "Top-tier",
-              rate: "$40+",
-              vol: "40+ videos/mo",
               monthly: "$5,000 – ∞",
               desc: "High-performing creators earning renewals and performance bonuses.",
               highlight: false,
@@ -991,15 +985,13 @@ function CreatorView({ openFaq, setOpenFaq }) {
                   Most creators
                 </div>
               )}
-              <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-2">
+              <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-4">
                 {tier.tier}
               </div>
-              <div className="font-serif-display text-5xl mb-1">
-                {tier.rate}
-                <span className="text-neutral-500 text-xl">/video</span>
+              <div className="font-serif-display text-4xl neon-text mb-2">~ {tier.monthly}/mo</div>
+              <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500 mb-6">
+                Retainers + Performance Bonuses
               </div>
-              <div className="text-neutral-400 text-sm mb-6">{tier.vol}</div>
-              <div className="font-serif-display text-2xl neon-text mb-6">~ {tier.monthly}/mo</div>
               <p className="text-neutral-400 text-sm leading-relaxed mt-auto">{tier.desc}</p>
             </div>
           ))}
