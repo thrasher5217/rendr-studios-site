@@ -518,34 +518,43 @@ function BrandView({ openFaq, setOpenFaq }) {
           {sampleWork.map((item, i) => (
             <div
               key={i}
-              className="aspect-[9/16] thumbnail-placeholder rounded-xl sm:rounded-2xl border border-neutral-900 hover-lift relative overflow-hidden group cursor-pointer"
+              className={`aspect-[9/16] rounded-xl sm:rounded-2xl border border-neutral-900 relative overflow-hidden ${item.video ? "" : "thumbnail-placeholder hover-lift group cursor-pointer"}`}
             >
-              {item.video && (
-                <iframe
-                  src={item.video}
-                  className="absolute inset-0 w-full h-full"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  style={{ pointerEvents: "auto" }}
-                />
-              )}
-              <div className={`absolute inset-0 p-3 sm:p-5 flex flex-col justify-between ${item.video ? "pointer-events-none" : ""}`}>
-                <div className="flex items-start justify-between">
-                  <div className="font-mono text-[8px] sm:text-[10px] uppercase tracking-widest text-neutral-500 border border-neutral-800 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded bg-neutral-950/70 backdrop-blur">
-                    {item.platform}
+              {item.video ? (
+                <>
+                  <iframe
+                    src={`${item.video}?rel=0&modestbranding=1`}
+                    className="absolute inset-0 w-full h-full z-10"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 z-20 pointer-events-none bg-gradient-to-t from-neutral-950/90 via-neutral-950/40 to-transparent px-3 sm:px-5 pb-3 sm:pb-5 pt-10">
+                    <div className="flex items-center gap-2 mb-1">
+                      <div className="font-mono text-[8px] sm:text-[10px] uppercase tracking-widest text-neutral-400 border border-neutral-700 px-1.5 sm:px-2 py-0.5 rounded bg-neutral-950/60">
+                        {item.platform}
+                      </div>
+                    </div>
+                    <div className="font-serif-display text-xl sm:text-3xl neon-text">{item.views}</div>
+                    <div className="text-[10px] sm:text-xs text-neutral-400 mt-1">{item.label}</div>
                   </div>
-                  {!item.video && (
+                </>
+              ) : (
+                <div className="absolute inset-0 p-3 sm:p-5 flex flex-col justify-between">
+                  <div className="flex items-start justify-between">
+                    <div className="font-mono text-[8px] sm:text-[10px] uppercase tracking-widest text-neutral-500 border border-neutral-800 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">
+                      {item.platform}
+                    </div>
                     <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-full bg-neutral-100/10 backdrop-blur flex items-center justify-center group-hover:bg-white group-hover:text-neutral-950 transition">
                       <span className="text-[10px] sm:text-xs ml-0.5">▶</span>
                     </div>
-                  )}
+                  </div>
+                  <div>
+                    <div className="font-serif-display text-xl sm:text-3xl neon-text">{item.views}</div>
+                    <div className="text-[10px] sm:text-xs text-neutral-400 mt-1">{item.label}</div>
+                  </div>
                 </div>
-                <div className="bg-gradient-to-t from-neutral-950/80 to-transparent -mx-3 sm:-mx-5 -mb-3 sm:-mb-5 px-3 sm:px-5 pb-3 sm:pb-5 pt-8">
-                  <div className="font-serif-display text-xl sm:text-3xl neon-text">{item.views}</div>
-                  <div className="text-[10px] sm:text-xs text-neutral-400 mt-1">{item.label}</div>
-                </div>
-              </div>
+              )}
             </div>
           ))}
         </div>
