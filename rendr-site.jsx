@@ -41,8 +41,8 @@ export default function RendrStudios() {
       };
     })(window, "https://app.cal.com/embed/embed.js", "init");
 
-    window.Cal("init", "15min", { origin: "https://app.cal.com" });
-    window.Cal.ns["15min"]("ui", {
+    window.Cal("init", "30min", { origin: "https://app.cal.com" });
+    window.Cal.ns["30min"]("ui", {
       hideEventTypeDetails: false,
       layout: "month_view",
     });
@@ -251,8 +251,8 @@ export default function RendrStudios() {
           {isBrand ? (
             <button
               className="hidden md:flex items-center gap-2 neon-btn px-5 py-2.5 rounded-full text-sm font-medium"
-              data-cal-link="ty-mcguire-bfmkql/15min"
-              data-cal-namespace="15min"
+              data-cal-link="ty-mcguire-bfmkql/30min"
+              data-cal-namespace="30min"
               data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
             >
               Book a call
@@ -368,8 +368,8 @@ function BrandView({ openFaq, setOpenFaq }) {
             <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
               <button
                 className="neon-btn px-7 py-4 rounded-full text-base font-medium flex items-center gap-3 whitespace-nowrap"
-                data-cal-link="ty-mcguire-bfmkql/15min"
-                data-cal-namespace="15min"
+                data-cal-link="ty-mcguire-bfmkql/30min"
+                data-cal-namespace="30min"
                 data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
               >
                 Book a Discovery Call
@@ -651,8 +651,8 @@ function BrandView({ openFaq, setOpenFaq }) {
             <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
               <button
                 className="neon-btn px-8 py-4 rounded-full text-base font-medium flex items-center gap-3"
-                data-cal-link="ty-mcguire-bfmkql/15min"
-                data-cal-namespace="15min"
+                data-cal-link="ty-mcguire-bfmkql/30min"
+                data-cal-namespace="30min"
                 data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
               >
                 Book a Discovery Call
