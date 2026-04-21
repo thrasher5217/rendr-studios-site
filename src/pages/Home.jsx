@@ -304,13 +304,12 @@ export default function RendrStudios() {
 function BrandView({ openFaq, setOpenFaq }) {
   const sampleWork = [
     { label: "Tech / VR", views: "2M", platform: "Shorts", video: "https://www.youtube.com/embed/81LVnOdc600" },
-    { label: "Deals", views: "1.4M", platform: "TikTok", video: "https://www.tiktok.com/embed/v2/7545659867004947742" },
     { label: "Tech / VR", views: "932K", platform: "Shorts", video: "https://www.youtube.com/embed/GL3_momtHVg" },
-    { label: "Deals", views: "953K", platform: "TikTok", video: "https://www.tiktok.com/embed/v2/7555561337997364510" },
     { label: "Tech / VR", views: "931K", platform: "Shorts", video: "https://www.youtube.com/embed/HsYO1rx7JJ0" },
-    { label: "Finance", views: "776K", platform: "TikTok", video: "https://www.tiktok.com/embed/v2/7625468302487293215" },
+    { label: "Deals", views: "1.4M", platform: "TikTok", video: "https://www.tiktok.com/embed/v2/7545659867004947742" },
+    { label: "Deals", views: "953K", platform: "TikTok", video: "https://www.tiktok.com/embed/v2/7555561337997364510" },
     { label: "Tech / VR", views: "933K", platform: "Shorts", video: "https://www.youtube.com/embed/m91Sdh3VdLg" },
-    { label: "Products", views: "431K", platform: "TikTok", video: "https://www.tiktok.com/embed/v2/7619227187127799071" },
+    { label: "Finance", views: "776K", platform: "TikTok", video: "https://www.tiktok.com/embed/v2/7625468302487293215" },
   ];
 
   const faqs = [
