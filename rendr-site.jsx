@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { PopupButton } from '@typeform/embed-react';
 
 export default function RendrStudios() {
   const [mode, setMode] = useState("brand");
@@ -247,17 +248,25 @@ export default function RendrStudios() {
             </button>
           </div>
 
-          <button
-            className="hidden md:flex items-center gap-2 neon-btn px-5 py-2.5 rounded-full text-sm font-medium"
-            {...(isBrand && {
-              "data-cal-link": "ty-mcguire-bfmkql/15min",
-              "data-cal-namespace": "15min",
-              "data-cal-config": '{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}',
-            })}
-          >
-            {isBrand ? "Book a call" : "Apply"}
-            <span className="text-xs">→</span>
-          </button>
+          {isBrand ? (
+            <button
+              className="hidden md:flex items-center gap-2 neon-btn px-5 py-2.5 rounded-full text-sm font-medium"
+              data-cal-link="ty-mcguire-bfmkql/15min"
+              data-cal-namespace="15min"
+              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+            >
+              Book a call
+              <span className="text-xs">→</span>
+            </button>
+          ) : (
+            <PopupButton 
+              id="s1hRa4kO" 
+              className="hidden md:flex items-center gap-2 neon-btn px-5 py-2.5 rounded-full text-sm font-medium"
+            >
+              Apply
+              <span className="text-xs">→</span>
+            </PopupButton>
+          )}
         </div>
       </nav>
 
@@ -728,10 +737,10 @@ function CreatorView({ openFaq, setOpenFaq }) {
             </p>
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
-              <button className="neon-btn px-7 py-4 rounded-full text-base font-medium flex items-center gap-3 whitespace-nowrap">
+              <PopupButton id="s1hRa4kO" className="neon-btn px-7 py-4 rounded-full text-base font-medium flex items-center gap-3 whitespace-nowrap">
                 Apply to create
                 <span>→</span>
-              </button>
+              </PopupButton>
               <span className="font-mono text-xs text-neutral-500">
                 2-min application. Reviewed every Friday.
               </span>
@@ -1062,10 +1071,10 @@ function CreatorView({ openFaq, setOpenFaq }) {
               reach out within a week with next steps.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
-              <button className="neon-btn px-8 py-4 rounded-full text-base font-medium flex items-center gap-3">
+              <PopupButton id="s1hRa4kO" className="neon-btn px-8 py-4 rounded-full text-base font-medium flex items-center gap-3">
                 Start application
                 <span>→</span>
-              </button>
+              </PopupButton>
               <a
                 href="#"
                 className="font-mono text-sm text-neutral-500 hover:text-neutral-100 transition"
