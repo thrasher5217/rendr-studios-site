@@ -222,7 +222,7 @@ export default function RendrStudios() {
           {/* Wordmark */}
           <a href="#" className="flex items-baseline gap-1.5 shrink-0">
             <span className="rendr-mark text-xl md:text-2xl flicker">Rendr</span>
-            <span className="font-serif-display italic text-xl md:text-2xl text-neutral-500 hidden sm:inline">
+            <span className="font-serif-display italic text-xl md:text-2xl text-neutral-500">
               Studios
             </span>
           </a>
