@@ -956,7 +956,7 @@ function CreatorView({ openFaq, setOpenFaq }) {
                 "You post on TikTok, YouTube Shorts, or Reels — any or all",
                 "Your content has a clear niche or vibe (fitness, productivity, finance, tech, lifestyle, study, wellness, etc.)",
                 "Any phone that shoots 1080p — basically any phone from the last 5 years",
-                "You can ship 5-10+ videos/week when you're actively on a campaign",
+                "You can dedicate up to an hour a day to film a handful of short clips",
                 "Based anywhere — we work with creators globally",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-5 pb-5 border-b border-neutral-900">
