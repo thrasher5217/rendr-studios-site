@@ -303,13 +303,13 @@ export default function RendrStudios() {
    ============================================================ */
 function BrandView({ openFaq, setOpenFaq }) {
   const sampleWork = [
-    { label: "Tech / VR", views: "2M", platform: "Shorts", video: "https://www.youtube.com/embed/81LVnOdc600" },
-    { label: "Tech / VR", views: "932K", platform: "Shorts", video: "https://www.youtube.com/embed/GL3_momtHVg" },
-    { label: "Tech / VR", views: "931K", platform: "Shorts", video: "https://www.youtube.com/embed/HsYO1rx7JJ0" },
-    { label: "Health", views: "1.4M", platform: "TikTok", video: "https://www.tiktok.com/embed/v2/7545659867004947742" },
-    { label: "Health", views: "953K", platform: "TikTok", video: "https://www.tiktok.com/embed/v2/7555561337997364510" },
-    { label: "Tech / VR", views: "933K", platform: "Shorts", video: "https://www.youtube.com/embed/m91Sdh3VdLg" },
-    { label: "Finance", views: "776K", platform: "TikTok", video: "https://www.tiktok.com/embed/v2/7625468302487293215" },
+    { label: "Tech / VR", views: "2M", image: "https://i.ytimg.com/vi/81LVnOdc600/hqdefault.jpg" },
+    { label: "Tech / VR", views: "932K", image: "https://i.ytimg.com/vi/GL3_momtHVg/hqdefault.jpg" },
+    { label: "Tech / VR", views: "931K", image: "https://i.ytimg.com/vi/HsYO1rx7JJ0/hqdefault.jpg" },
+    { label: "Health", views: "1.4M", image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=600&h=1066&fit=crop" },
+    { label: "Health", views: "953K", image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=600&h=1066&fit=crop" },
+    { label: "Tech / VR", views: "933K", image: "https://i.ytimg.com/vi/m91Sdh3VdLg/hqdefault.jpg" },
+    { label: "Finance", views: "776K", image: "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?q=80&w=600&h=1066&fit=crop" },
   ];
 
   const faqs = [
@@ -512,49 +512,35 @@ function BrandView({ openFaq, setOpenFaq }) {
           <p className="font-mono text-xs sm:text-sm text-neutral-500">Updated weekly</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
-          {sampleWork.map((item, i) => (
-            <div
-              key={i}
-              className={`aspect-[9/16] rounded-xl sm:rounded-2xl border border-neutral-900 relative overflow-hidden ${item.video ? "" : "thumbnail-placeholder hover-lift group cursor-pointer"}`}
-            >
-              {item.video ? (
-                <>
-                  <iframe
-                    src={`${item.video}?rel=0&modestbranding=1`}
-                    className="absolute inset-0 w-full h-full z-10"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                  <div className="absolute bottom-0 left-0 right-0 z-20 pointer-events-none bg-gradient-to-t from-neutral-950/90 via-neutral-950/40 to-transparent px-3 sm:px-5 pb-3 sm:pb-5 pt-10">
-                    <div className="flex items-center gap-2 mb-1">
-                      <div className="font-mono text-[8px] sm:text-[10px] uppercase tracking-widest text-neutral-400 border border-neutral-700 px-1.5 sm:px-2 py-0.5 rounded bg-neutral-950/60">
-                        {item.platform}
-                      </div>
-                    </div>
-                    <div className="font-serif-display text-xl sm:text-3xl neon-text">{item.views}</div>
-                    <div className="text-[10px] sm:text-xs text-neutral-400 mt-1">{item.label}</div>
-                  </div>
-                </>
-              ) : (
-                <div className="absolute inset-0 p-3 sm:p-5 flex flex-col justify-between">
-                  <div className="flex items-start justify-between">
-                    <div className="font-mono text-[8px] sm:text-[10px] uppercase tracking-widest text-neutral-500 border border-neutral-800 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">
-                      {item.platform}
-                    </div>
-                    <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-full bg-neutral-100/10 backdrop-blur flex items-center justify-center group-hover:bg-white group-hover:text-neutral-950 transition">
-                      <span className="text-[10px] sm:text-xs ml-0.5">▶</span>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="font-serif-display text-xl sm:text-3xl neon-text">{item.views}</div>
-                    <div className="text-[10px] sm:text-xs text-neutral-400 mt-1">{item.label}</div>
-                  </div>
+        <div className="relative -mx-4 sm:-mx-6 md:-mx-10 overflow-hidden hide-scrollbar">
+          {/* Subtle glow behind the carousel */}
+          <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 to-purple-900/10 mix-blend-screen pointer-events-none" />
+          
+          <div className="flex gap-4 sm:gap-6 w-max py-4 sm:py-8 px-4 sm:px-6 md:px-10 animate-scroll">
+            {[...sampleWork, ...sampleWork].map((item, i) => (
+              <div
+                key={i}
+                className="w-48 sm:w-60 md:w-72 shrink-0 aspect-[9/16] rounded-2xl md:rounded-[32px] border border-neutral-800 relative overflow-hidden group bg-neutral-900 shadow-xl"
+              >
+                <img 
+                  src={item.image} 
+                  alt={item.label} 
+                  className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105" 
+                />
+                
+                {/* Bottom gradient for pill contrast */}
+                <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/80 to-transparent pointer-events-none" />
+                
+                {/* View count pill */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 backdrop-blur-md text-white rounded-full px-3 py-1.5 flex items-center gap-1.5 shadow-lg border border-white/5">
+                  <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3 ml-0.5 opacity-90">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                  <span className="font-sans font-bold text-sm tracking-tight">{item.views}</span>
                 </div>
-              )}
-            </div>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
