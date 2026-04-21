@@ -306,10 +306,11 @@ function BrandView({ openFaq, setOpenFaq }) {
     { label: "Tech / VR", views: "2M", image: "https://i.ytimg.com/vi/81LVnOdc600/hqdefault.jpg" },
     { label: "Tech / VR", views: "932K", image: "https://i.ytimg.com/vi/GL3_momtHVg/hqdefault.jpg" },
     { label: "Tech / VR", views: "931K", image: "https://i.ytimg.com/vi/HsYO1rx7JJ0/hqdefault.jpg" },
-    { label: "Health", views: "1.4M", image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=600&h=1066&fit=crop" },
-    { label: "Health", views: "953K", image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=600&h=1066&fit=crop" },
+    { label: "Health", views: "1.4M", image: "/thumbnails/tiktok-1.jpg" },
+    { label: "Health", views: "953K", image: "/thumbnails/tiktok-2.jpg" },
     { label: "Tech / VR", views: "933K", image: "https://i.ytimg.com/vi/m91Sdh3VdLg/hqdefault.jpg" },
-    { label: "Finance", views: "776K", image: "https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?q=80&w=600&h=1066&fit=crop" },
+    { label: "Finance", views: "776K", image: "/thumbnails/tiktok-3.jpg" },
+    { label: "Health", views: "2.1M", image: "/thumbnails/tiktok-4.jpg" },
   ];
 
   const faqs = [
