@@ -287,7 +287,7 @@ export default function RendrStudios() {
             <button onClick={() => setMode("brand")} className="hover:text-neutral-100 text-left">For Brands</button>
             <button onClick={() => setMode("creator")} className="hover:text-neutral-100 text-left">For Creators</button>
             <a href="#work" className="hover:text-neutral-100">Work</a>
-            <a href="mailto:[founder@rendrstudios.com]" className="hover:text-neutral-100">Contact</a>
+            <a href="mailto:Ty@rendr-studios.com" className="hover:text-neutral-100">Contact</a>
             <a href="#" className="hover:text-neutral-100">LinkedIn</a>
             <a href="#" className="hover:text-neutral-100">Instagram</a>
           </div>
@@ -663,10 +663,10 @@ function BrandView({ openFaq, setOpenFaq }) {
                 <span>→</span>
               </button>
               <a
-                href="mailto:[founder@rendrstudios.com]"
+                href="mailto:Ty@rendr-studios.com"
                 className="font-mono text-xs sm:text-sm text-neutral-500 hover:text-neutral-100 transition"
               >
-                or email [founder@rendrstudios.com]
+                or email Ty@rendr-studios.com
               </a>
             </div>
           </div>
