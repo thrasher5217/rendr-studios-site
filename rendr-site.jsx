@@ -958,7 +958,7 @@ function CreatorView({ openFaq, setOpenFaq }) {
             {
               tier: "Starting",
               monthly: "$750 – $1,500",
-              desc: "New to UGC, or smaller following. Prove the craft, tier up fast.",
+              desc: "New to UGC. Prove the craft, tier up fast.",
               highlight: false,
             },
             {
