@@ -969,7 +969,7 @@ function CreatorView({ openFaq, setOpenFaq }) {
             },
             {
               tier: "Top-tier",
-              monthly: "$5,000 – ∞",
+              monthly: "$5,000 – $50,000",
               desc: "High-performing creators earning renewals and performance bonuses.",
               highlight: false,
             },
