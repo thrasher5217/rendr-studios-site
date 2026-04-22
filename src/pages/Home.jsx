@@ -465,10 +465,10 @@ function BrandView({ openFaq, setOpenFaq, setShowBrandConfirm }) {
           <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-neutral-900">
             <div className="p-5 sm:p-6 md:p-10">
               <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-1 sm:mb-2">
-                Creators
+                Vetted Creators
               </div>
-              <div className="font-serif-display text-4xl sm:text-5xl md:text-7xl">15+</div>
-              <div className="mt-1 sm:mt-2 text-neutral-400 text-xs sm:text-sm">Matched to your app</div>
+              <div className="font-serif-display text-4xl sm:text-5xl md:text-7xl">50+</div>
+              <div className="mt-1 sm:mt-2 text-neutral-400 text-xs sm:text-sm">Available to you</div>
             </div>
             <div className="p-5 sm:p-6 md:p-10">
               <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-1 sm:mb-2">
