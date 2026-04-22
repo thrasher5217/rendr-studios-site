@@ -5,6 +5,7 @@ export default function RendrStudios() {
   const [openFaq, setOpenFaq] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const [showBrandConfirm, setShowBrandConfirm] = useState(false);
+  const [showWelcome, setShowWelcome] = useState(true);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -301,6 +302,42 @@ export default function RendrStudios() {
           <div className="font-mono text-xs text-neutral-600">© 2026 Rendr Studios</div>
         </div>
       </footer>
+
+      {/* Welcome Landing Modal */}
+      <div
+        className={`fixed inset-0 z-[60] flex items-center justify-center p-4 transition-all duration-500 ${
+          showWelcome ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        <div className={`absolute inset-0 bg-black/90 backdrop-blur-md transition-opacity duration-500 ${showWelcome ? 'opacity-100' : 'opacity-0'}`} />
+        <div className={`relative text-center max-w-md w-full transition-all duration-500 ${
+          showWelcome ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-6 scale-95'
+        }`}>
+          <div className="flex items-baseline gap-2 mb-3 justify-center">
+            <span className="rendr-mark text-4xl sm:text-5xl">Rendr</span>
+            <span className="font-serif-display italic text-4xl sm:text-5xl text-neutral-500">Studios</span>
+          </div>
+          <p className="text-neutral-500 font-mono text-xs sm:text-sm mb-10 tracking-wide">Who are you?</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              onClick={() => { setMode('brand'); setShowWelcome(false); }}
+              className="group relative px-8 py-5 rounded-2xl text-base font-medium transition-all duration-300 border border-[#00E5FF]/30 hover:border-[#00E5FF]/60 bg-[#00E5FF]/5 hover:bg-[#00E5FF]/10 text-white flex-1"
+              style={{ boxShadow: '0 0 30px rgba(0, 229, 255, 0.08)' }}
+            >
+              <div className="font-serif-display text-2xl sm:text-3xl mb-1" style={{ color: '#00E5FF' }}>Brand</div>
+              <div className="font-mono text-[10px] sm:text-xs text-neutral-500 uppercase tracking-widest">I need creators</div>
+            </button>
+            <button
+              onClick={() => { setMode('creator'); setShowWelcome(false); }}
+              className="group relative px-8 py-5 rounded-2xl text-base font-medium transition-all duration-300 border border-[#B4FF39]/30 hover:border-[#B4FF39]/60 bg-[#B4FF39]/5 hover:bg-[#B4FF39]/10 text-white flex-1"
+              style={{ boxShadow: '0 0 30px rgba(180, 255, 57, 0.08)' }}
+            >
+              <div className="font-serif-display text-2xl sm:text-3xl mb-1" style={{ color: '#B4FF39' }}>Creator</div>
+              <div className="font-mono text-[10px] sm:text-xs text-neutral-500 uppercase tracking-widest">I want to create</div>
+            </button>
+          </div>
+        </div>
+      </div>
 
       {/* Brand Discovery Call Confirm Modal */}
       <div 
