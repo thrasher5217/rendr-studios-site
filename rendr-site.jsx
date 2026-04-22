@@ -544,7 +544,7 @@ function BrandView({ openFaq, setOpenFaq, setShowBrandConfirm }) {
             We run organic the way it <em className="neon-text">actually works</em>.
           </h2>
           <p className="mt-6 text-neutral-400 text-lg max-w-3xl">
-            15+ creators. 3 platforms. Up to 5,000 videos a month. Here's how that's possible without the
+            50+ creators. 3 platforms. 180-5,000 videos a month. Here's how that's possible without the
             quality falling off a cliff.
           </p>
         </div>
