@@ -786,7 +786,7 @@ function CreatorView({ openFaq, setOpenFaq }) {
     },
     {
       q: "How do I get paid?",
-      a: "Monthly. We strictly use SideShift for all payments. We pay per video delivered — not per video 'approved' by a brand. Ship it, get paid.",
+      a: "We strictly use SideShift for all payouts—sent within 24-48 hours after all your contracted videos have been posted.",
     },
     {
       q: "Where are you based and who runs this?",
@@ -1005,8 +1005,7 @@ function CreatorView({ openFaq, setOpenFaq }) {
         </div>
 
         <p className="mt-10 font-mono text-sm text-neutral-500 max-w-2xl">
-          Paid monthly. We strictly use SideShift for all payments. No brand-approval gates. Ship the
-          videos, get paid.
+          We strictly use SideShift for all payouts—sent within 24-48 hours after all your contracted videos have been posted.
         </p>
       </section>
 
