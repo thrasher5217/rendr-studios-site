@@ -752,6 +752,13 @@ function BrandView({ openFaq, setOpenFaq, setShowBrandConfirm }) {
    CREATOR VIEW
    ============================================================ */
 function CreatorView({ openFaq, setOpenFaq }) {
+  // Re-initialize Typeform embed when this view mounts
+  useEffect(() => {
+    if (window.tf && window.tf.load) {
+      window.tf.load();
+    }
+  }, []);
+
   const creators = [
     { name: "Sarah K.", niche: "Fitness", followers: "45K", quote: "Most reliable UGC gig I've had. Period." },
     { name: "Jake M.", niche: "Productivity", followers: "12K", quote: "Clear briefs, fast pay, no editing on my end." },
