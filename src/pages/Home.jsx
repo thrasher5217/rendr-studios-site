@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { PopupButton } from '@typeform/embed-react';
 
 export default function RendrStudios() {
   const [mode, setMode] = useState("brand");
@@ -258,13 +257,13 @@ export default function RendrStudios() {
               <span className="text-xs">→</span>
             </button>
           ) : (
-            <PopupButton 
-              id="s1hRa4kO" 
+            <button 
+              data-tf-popup="s1hRa4kO" 
               className="hidden md:flex items-center gap-2 neon-btn px-5 py-2.5 rounded-full text-sm font-medium"
             >
               Apply
               <span className="text-xs">→</span>
-            </PopupButton>
+            </button>
           )}
         </div>
       </nav>
@@ -732,10 +731,10 @@ function CreatorView({ openFaq, setOpenFaq }) {
             </p>
 
             <div className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
-              <PopupButton id="s1hRa4kO" className="neon-btn px-6 sm:px-7 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-medium flex items-center gap-3 whitespace-nowrap w-full sm:w-auto justify-center">
+              <button data-tf-popup="s1hRa4kO" className="neon-btn px-6 sm:px-7 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-medium flex items-center gap-3 whitespace-nowrap w-full sm:w-auto justify-center">
                 Apply to create
                 <span>→</span>
-              </PopupButton>
+              </button>
               <span className="font-mono text-xs text-neutral-500">
                 2-min application. Reviewed daily.
               </span>
@@ -1066,10 +1065,10 @@ function CreatorView({ openFaq, setOpenFaq }) {
               reach out within a week with next steps.
             </p>
             <div className="mt-6 md:mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
-              <PopupButton id="s1hRa4kO" className="neon-btn px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-medium flex items-center gap-3 w-full sm:w-auto justify-center">
+              <button data-tf-popup="s1hRa4kO" className="neon-btn px-6 sm:px-8 py-3.5 sm:py-4 rounded-full text-sm sm:text-base font-medium flex items-center gap-3 w-full sm:w-auto justify-center">
                 Start application
                 <span>→</span>
-              </PopupButton>
+              </button>
               <a
                 href="#"
                 className="font-mono text-xs sm:text-sm text-neutral-500 hover:text-neutral-100 transition"
@@ -1080,10 +1079,16 @@ function CreatorView({ openFaq, setOpenFaq }) {
           </div>
         </div>
       </section>
-      {showBrandConfirm && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={() => setShowBrandConfirm(false)} />
-          <div className="relative bg-neutral-900 border border-neutral-800 rounded-3xl p-6 sm:p-10 max-w-lg w-full shadow-2xl">
+      {/* Brand Discovery Call Confirm Modal */}
+      <div 
+        className={`fixed inset-0 z-50 flex items-center justify-center p-4 transition-all duration-300 ${
+          showBrandConfirm ? 'opacity-100 pointer-events-auto delay-75' : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        <div className={`absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300 ${showBrandConfirm ? 'opacity-100' : 'opacity-0'}`} onClick={() => setShowBrandConfirm(false)} />
+        <div className={`relative bg-neutral-900 border border-neutral-800 rounded-3xl p-6 sm:p-10 max-w-lg w-full shadow-2xl transition-all duration-300 ${
+          showBrandConfirm ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'
+        }`}>
             <h3 className="font-serif-display text-2xl sm:text-3xl mb-4 text-white">Just to confirm...</h3>
             <p className="text-neutral-400 mb-8 text-base">
               This discovery call is strictly for brand owners. If you are a creator, please go to the creator tab to apply.
@@ -1116,9 +1121,8 @@ function CreatorView({ openFaq, setOpenFaq }) {
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
             </button>
-          </div>
         </div>
-      )}
+      </div>
     </main>
   );
 }
