@@ -5,6 +5,7 @@ export default function RendrStudios() {
   const [mode, setMode] = useState("brand");
   const [openFaq, setOpenFaq] = useState(null);
   const [scrolled, setScrolled] = useState(false);
+  const [showBrandConfirm, setShowBrandConfirm] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -250,10 +251,8 @@ export default function RendrStudios() {
 
           {isBrand ? (
             <button
+              onClick={() => setShowBrandConfirm(true)}
               className="hidden md:flex items-center gap-2 neon-btn px-5 py-2.5 rounded-full text-sm font-medium"
-              data-cal-link="ty-mcguire-bfmkql/30min"
-              data-cal-namespace="30min"
-              data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
             >
               Book a call
               <span className="text-xs">→</span>
@@ -367,10 +366,8 @@ function BrandView({ openFaq, setOpenFaq }) {
 
             <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
               <button
+                onClick={() => setShowBrandConfirm(true)}
                 className="neon-btn px-7 py-4 rounded-full text-base font-medium flex items-center gap-3 whitespace-nowrap"
-                data-cal-link="ty-mcguire-bfmkql/30min"
-                data-cal-namespace="30min"
-                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
               >
                 Book a Discovery Call
                 <span>→</span>
@@ -650,10 +647,8 @@ function BrandView({ openFaq, setOpenFaq }) {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 items-center justify-center">
               <button
+                onClick={() => setShowBrandConfirm(true)}
                 className="neon-btn px-8 py-4 rounded-full text-base font-medium flex items-center gap-3"
-                data-cal-link="ty-mcguire-bfmkql/30min"
-                data-cal-namespace="30min"
-                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
               >
                 Book a Discovery Call
                 <span>→</span>
@@ -1085,6 +1080,46 @@ function CreatorView({ openFaq, setOpenFaq }) {
           </div>
         </div>
       </section>
+      {/* Brand Discovery Call Confirm Modal */}
+      {showBrandConfirm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={() => setShowBrandConfirm(false)} />
+          <div className="relative bg-neutral-900 border border-neutral-800 rounded-3xl p-6 sm:p-10 max-w-lg w-full shadow-2xl">
+            <h3 className="font-serif-display text-2xl sm:text-3xl mb-4 text-white">Just to confirm...</h3>
+            <p className="text-neutral-400 mb-8 text-base">
+              This discovery call is strictly for brand owners. If you are a creator, please go to the creator tab to apply.
+            </p>
+            <div className="flex flex-col gap-3">
+              <button
+                className="w-full neon-btn px-6 py-4 rounded-xl text-sm font-medium flex items-center justify-center gap-2"
+                data-cal-link="ty-mcguire-bfmkql/30min"
+                data-cal-namespace="30min"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+                onClick={() => setShowBrandConfirm(false)}
+              >
+                I am a Brand Owner (Continue)
+                <span>→</span>
+              </button>
+              <button
+                onClick={() => {
+                  setMode("creator");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  setShowBrandConfirm(false);
+                }}
+                className="w-full px-6 py-4 rounded-xl text-sm font-medium text-neutral-300 bg-neutral-800 hover:bg-neutral-700 transition flex items-center justify-center gap-2"
+              >
+                I am a Creator (Take me there)
+              </button>
+            </div>
+            <button 
+              onClick={() => setShowBrandConfirm(false)}
+              className="absolute top-4 right-4 text-neutral-500 hover:text-white transition"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
