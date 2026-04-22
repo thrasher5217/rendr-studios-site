@@ -301,6 +301,51 @@ export default function RendrStudios() {
           <div className="font-mono text-xs text-neutral-600">© 2026 Rendr Studios</div>
         </div>
       </footer>
+
+      {/* Brand Discovery Call Confirm Modal */}
+      <div 
+        className={`fixed inset-0 z-50 flex items-center justify-center p-4 transition-all duration-300 ${
+          showBrandConfirm ? 'opacity-100 pointer-events-auto delay-75' : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        <div className={`absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300 ${showBrandConfirm ? 'opacity-100' : 'opacity-0'}`} onClick={() => setShowBrandConfirm(false)} />
+        <div className={`relative bg-neutral-900 border border-neutral-800 rounded-3xl p-6 sm:p-10 max-w-lg w-full shadow-2xl transition-all duration-300 ${
+          showBrandConfirm ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'
+        }`}>
+            <h3 className="font-serif-display text-2xl sm:text-3xl mb-4 text-white">Just to confirm...</h3>
+            <p className="text-neutral-400 mb-8 text-base">
+              This discovery call is strictly for brand owners. If you are a creator, please go to the creator tab to apply.
+            </p>
+            <div className="flex flex-col gap-3">
+              <button
+                className="w-full neon-btn px-6 py-4 rounded-xl text-sm font-medium flex items-center justify-center gap-2"
+                data-cal-link="ty-mcguire-bfmkql/30min"
+                data-cal-namespace="30min"
+                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+                onClick={() => setShowBrandConfirm(false)}
+              >
+                I am a Brand Owner (Continue)
+                <span>→</span>
+              </button>
+              <button
+                onClick={() => {
+                  setMode("creator");
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  setShowBrandConfirm(false);
+                }}
+                className="w-full px-6 py-4 rounded-xl text-sm font-medium text-neutral-300 bg-neutral-800 hover:bg-neutral-700 transition flex items-center justify-center gap-2"
+              >
+                I am a Creator (Take me there)
+              </button>
+            </div>
+            <button 
+              onClick={() => setShowBrandConfirm(false)}
+              className="absolute top-4 right-4 text-neutral-500 hover:text-white transition"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+      </div>
     </div>
   );
 }
@@ -1079,50 +1124,6 @@ function CreatorView({ openFaq, setOpenFaq }) {
           </div>
         </div>
       </section>
-      {/* Brand Discovery Call Confirm Modal */}
-      <div 
-        className={`fixed inset-0 z-50 flex items-center justify-center p-4 transition-all duration-300 ${
-          showBrandConfirm ? 'opacity-100 pointer-events-auto delay-75' : 'opacity-0 pointer-events-none'
-        }`}
-      >
-        <div className={`absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity duration-300 ${showBrandConfirm ? 'opacity-100' : 'opacity-0'}`} onClick={() => setShowBrandConfirm(false)} />
-        <div className={`relative bg-neutral-900 border border-neutral-800 rounded-3xl p-6 sm:p-10 max-w-lg w-full shadow-2xl transition-all duration-300 ${
-          showBrandConfirm ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'
-        }`}>
-            <h3 className="font-serif-display text-2xl sm:text-3xl mb-4 text-white">Just to confirm...</h3>
-            <p className="text-neutral-400 mb-8 text-base">
-              This discovery call is strictly for brand owners. If you are a creator, please go to the creator tab to apply.
-            </p>
-            <div className="flex flex-col gap-3">
-              <button
-                className="w-full neon-btn px-6 py-4 rounded-xl text-sm font-medium flex items-center justify-center gap-2"
-                data-cal-link="ty-mcguire-bfmkql/30min"
-                data-cal-namespace="30min"
-                data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
-                onClick={() => setShowBrandConfirm(false)}
-              >
-                I am a Brand Owner (Continue)
-                <span>→</span>
-              </button>
-              <button
-                onClick={() => {
-                  setMode("creator");
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                  setShowBrandConfirm(false);
-                }}
-                className="w-full px-6 py-4 rounded-xl text-sm font-medium text-neutral-300 bg-neutral-800 hover:bg-neutral-700 transition flex items-center justify-center gap-2"
-              >
-                I am a Creator (Take me there)
-              </button>
-            </div>
-            <button 
-              onClick={() => setShowBrandConfirm(false)}
-              className="absolute top-4 right-4 text-neutral-500 hover:text-white transition"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            </button>
-        </div>
-      </div>
     </main>
   );
 }
