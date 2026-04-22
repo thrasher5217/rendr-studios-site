@@ -467,7 +467,7 @@ function BrandView({ openFaq, setOpenFaq, setShowBrandConfirm }) {
               <div className="font-mono text-xs uppercase tracking-widest text-neutral-500 mb-2">
                 Vetted Creators
               </div>
-              <div className="font-serif-display text-6xl md:text-7xl">50+</div>
+              <div className="font-serif-display text-6xl md:text-7xl">100+</div>
               <div className="mt-2 text-neutral-400 text-sm">Available to you</div>
             </div>
             <div className="p-8 md:p-10">
@@ -544,7 +544,7 @@ function BrandView({ openFaq, setOpenFaq, setShowBrandConfirm }) {
             We run organic the way it <em className="neon-text">actually works</em>.
           </h2>
           <p className="mt-6 text-neutral-400 text-lg max-w-3xl">
-            50+ creators. 3 platforms. 180-5,000 videos a month. Here's how that's possible without the
+            100+ creators. 3 platforms. 180-5,000 videos a month. Here's how that's possible without the
             quality falling off a cliff.
           </p>
         </div>
