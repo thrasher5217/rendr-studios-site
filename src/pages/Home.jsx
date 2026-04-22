@@ -481,7 +481,7 @@ function BrandView({ openFaq, setOpenFaq, setShowBrandConfirm }) {
               <div className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-500 mb-1 sm:mb-2">
                 Videos / Month
               </div>
-              <div className="font-serif-display text-4xl sm:text-5xl md:text-6xl neon-text">200-5,000</div>
+              <div className="font-serif-display text-4xl sm:text-5xl md:text-6xl neon-text">180-5,000</div>
               <div className="mt-1 sm:mt-2 text-neutral-400 text-xs sm:text-sm">Scaled to fit your needs.</div>
             </div>
           </div>
