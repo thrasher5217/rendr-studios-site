@@ -580,8 +580,7 @@ function BrandView({ openFaq, setOpenFaq, setShowBrandConfirm }) {
 
         <div className="mt-12 border-l-2 accent-border pl-6 max-w-3xl" style={{ boxShadow: "inset 4px 0 12px -8px rgba(var(--accent-glow), 0.5)" }}>
           <p className="font-serif-display text-2xl italic text-neutral-300 leading-snug">
-            Most agencies cap out at 30-50 videos a month because they make creators edit their own
-            work. That's the bottleneck we removed.
+            Most new apps cap out at 30-50 videos a month because they don't have the systems or creators in place to manage the volume. That's the bottleneck we removed.
           </p>
         </div>
       </section>
