@@ -271,7 +271,7 @@ export default function RendrStudios() {
 
       <div className="relative z-10">
         {isBrand ? (
-          <BrandView openFaq={openFaq} setOpenFaq={setOpenFaq} />
+          <BrandView openFaq={openFaq} setOpenFaq={setOpenFaq} setShowBrandConfirm={setShowBrandConfirm} />
         ) : (
           <CreatorView openFaq={openFaq} setOpenFaq={setOpenFaq} />
         )}
@@ -309,7 +309,7 @@ export default function RendrStudios() {
 /* ============================================================
    BRAND VIEW
    ============================================================ */
-function BrandView({ openFaq, setOpenFaq }) {
+function BrandView({ openFaq, setOpenFaq, setShowBrandConfirm }) {
   const sampleWork = [
     { label: "Tech / VR", views: "2M", image: "https://i.ytimg.com/vi/81LVnOdc600/hqdefault.jpg" },
     { label: "Tech / VR", views: "932K", image: "https://i.ytimg.com/vi/GL3_momtHVg/hqdefault.jpg" },
