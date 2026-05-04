@@ -42,8 +42,8 @@ export default function RendrStudios() {
       };
     })(window, "https://app.cal.com/embed/embed.js", "init");
 
-    window.Cal("init", "30min", { origin: "https://app.cal.com" });
-    window.Cal.ns["30min"]("ui", {
+    window.Cal("init", "intro", { origin: "https://app.cal.com" });
+    window.Cal.ns["intro"]("ui", {
       hideEventTypeDetails: false,
       layout: "month_view",
     });
@@ -356,8 +356,8 @@ export default function RendrStudios() {
             <div className="flex flex-col gap-3">
               <button
                 className="w-full neon-btn px-6 py-4 rounded-xl text-sm font-medium flex items-center justify-center gap-2"
-                data-cal-link="ty-mcguire-bfmkql/30min"
-                data-cal-namespace="30min"
+                data-cal-link="rendr-studios/intro"
+                data-cal-namespace="intro"
                 data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
                 onClick={() => setShowBrandConfirm(false)}
               >

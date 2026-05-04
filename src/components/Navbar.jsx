@@ -35,7 +35,7 @@ export default function Navbar({ mode, setMode }) {
           </div>
 
           {isBrands ? (
-            <a href="https://cal.com/ty-mcguire-bfmkql/30min" target="_blank" rel="noopener noreferrer" className="nav-cta">Book a Call</a>
+            <button data-cal-link="rendr-studios/intro" data-cal-namespace="intro" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}' className="nav-cta">Book a Call</button>
           ) : (
             <a href="mailto:hello@rendrstudios.com" className="nav-cta creator-cta">Apply to Create</a>
           )}
@@ -64,7 +64,7 @@ export default function Navbar({ mode, setMode }) {
           </div>
 
           {isBrands ? (
-            <a href="https://cal.com/ty-mcguire-bfmkql/30min" target="_blank" rel="noopener noreferrer" className="nav-cta" onClick={() => setIsOpen(false)}>Book a Call</a>
+            <button data-cal-link="rendr-studios/intro" data-cal-namespace="intro" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}' className="nav-cta" onClick={() => setIsOpen(false)}>Book a Call</button>
           ) : (
             <a href="mailto:hello@rendrstudios.com" className="nav-cta creator-cta" onClick={() => setIsOpen(false)}>Apply to Create</a>
           )}
